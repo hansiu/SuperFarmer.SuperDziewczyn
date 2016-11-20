@@ -3,8 +3,11 @@ test_that("Kostki to wektory napisów o długości 12",{
   expect_true(is.vector(kostka_zielona))
   expect_true(is.character(kostka_czerwona))
   expect_true(is.character(kostka_zielona))
-  expect_equal(length(kostka_czerwona),12)
-  expect_equal(length(kostka_zielona),12)
+  expect_length(kostka_czerwona,12)
+  expect_length(kostka_zielona,12)
+  expect_named(kostka_zielona,NULL)
+  expect_named(kostka_czerwona,NULL)
+
 })
 
 test_that("Liczby zwierząt na kostkach są prawidłowe",{

@@ -9,7 +9,7 @@ rzut_kostkami(a, b)
 \arguments{
 \item{a}{wektor zawierajacy zwierzeta na kostce zielonej}
 
-\item{b}{wektor zawierajacy zwierzeta na kostce zielonej}
+\item{b}{wektor zawierajacy zwierzeta na kostce czerwonej}
 }
 \value{
 Wektor zawierajacy nazwy zwierzat wylosowanych na kostce zielonej i czerwonej odpowiednio

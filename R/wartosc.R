@@ -7,6 +7,8 @@
 #'
 #'@export
 
+####TO JEST CHYBA NIEPOTRZEBNE?
+
 wartosc <- function(wartosc_w_krolikach,zwierze){
   return(wartosc_w_krolikach[[zwierze]])
 }
