@@ -15,3 +15,4 @@ Packaged: 2016-11-19 20:57:19 UTC; O
 Author: Aleksandra Dabrowska [cre],
   Hanna Kranas [aut]
 Maintainer: Aleksandra Dabrowska <ad345131@students.mimuw.edu.pl>
+Suggests: testthat
