@@ -1,6 +1,6 @@
 test_that("Wartość w królikach to nazwany wektor o długości 7",{
   expect_true(is.vector(wartosc_w_krolikach))
-  expect_true(is.numeric(wartosc_w_krolikach))
+  expect_is(wartosc_w_krolikach,"numeric")
   expect_length(wartosc_w_krolikach,7)
   expect_named(wartosc_w_krolikach)
 })

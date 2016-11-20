@@ -2,7 +2,7 @@ test_that("Zamiana wektora napisowego rzutu daje wektor liczbowy",{
   expect_error(zamien_wynik_rzutu_na_wektor())
   expect_true(is.vector(zamien_wynik_rzutu_na_wektor(rzut_kostkami(kostka_zielona,kostka_czerwona))))
   expect_true(is.vector(zamien_wynik_rzutu_na_wektor(c('krolik','wilk'))))
-  expect_true(is.numeric(zamien_wynik_rzutu_na_wektor(rzut_kostkami(kostka_zielona,kostka_czerwona))))
+  expect_is(zamien_wynik_rzutu_na_wektor(rzut_kostkami(kostka_zielona,kostka_czerwona)),"numeric")
   expect_named(zamien_wynik_rzutu_na_wektor(rzut_kostkami(kostka_zielona,kostka_czerwona)),NULL)
   expect_length(zamien_wynik_rzutu_na_wektor(c('krolik','wilk')),7)
 })
