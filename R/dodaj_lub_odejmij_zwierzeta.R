@@ -1,4 +1,4 @@
-#'Funkcja zmieniajaca stan stad : gracza i glownego
+#'Funkcja zmieniajaca stan stad: gracza i glownego
 #'
 #'
 #'@param co mozliwe zmiany w stadzie
