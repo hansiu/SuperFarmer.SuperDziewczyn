@@ -3,33 +3,29 @@
 #'@param lis wartosc logiczna: TRUE - pojawil sie lis, FALSE - nie pojawil sie
 #'@param wilk wartosc logiczna: TRUE - pojawil sie wilk, FALSE - nie pojawil sie
 #'@param stado stan stada gracza
-#'@param stado_glowne stan stada glownego
+#'@param stado_max maksymalny stan stada gracza
 #'
 #'
 #'@export
 
-atak_drapieznika <- function(lis = FALSE, wilk = FALSE,stado,stado_glowne){
-  NoweStany <- list(Stado=stado,Glowne=stado_glowne)
+atak_drapieznika <- function(lis = FALSE, wilk = FALSE,stado,stado_max){
   if (wilk == TRUE ){
-    if (NoweStany$Stado['duzy_pies']>0){
+    if (stado['duzy_pies']>0){
       #ucieka duzy pies
-      NoweStany <- dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,0,1),-1,NoweStany$Stado,NoweStany$Glowne)
+      stado <- dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,0,1),-1,stado,stado_max-stado)
     } else {
       # wszystko oprocz koni i psow ucieka
-      NoweStany <- dodaj_lub_odejmij_zwierzeta(c(NoweStany$Stado[1:4],0,0,0),-1,NoweStany$Stado,NoweStany$Glowne)
+      stado <- dodaj_lub_odejmij_zwierzeta(c(stado[1:4],0,0,0),-1,stado,stado_max-stado)
     }
   }
   if (lis == TRUE ){
-    if (NoweStany$Stado['maly_pies']>0){
+    if (stado['maly_pies']>0){
       #ucieka maly pies
-      NoweStany <- dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,1,0),-1,NoweStany$Stado,NoweStany$Glowne)
+      stado <- dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,1,0),-1,stado,stado_max-stado)
     } else {
       # wszystkie kroliki uciekaja
-      NoweStany <- dodaj_lub_odejmij_zwierzeta(c(NoweStany$Stado['krolik'],0,0,0,0,0,0),-1,NoweStany$Stado,NoweStany$Glowne)
-
+      stado <- dodaj_lub_odejmij_zwierzeta(c(stado['krolik'],0,0,0,0,0,0),-1,stado,stado_max-stado)
     }
   }
-  stado <- NoweStany$Stado
-  stado_glowne <- NoweStany$Glowne
-  return(list(Stado=stado,Glowne=stado_glowne))
+  return(stado)
 }

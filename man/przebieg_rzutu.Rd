@@ -4,12 +4,10 @@
 \alias{przebieg_rzutu}
 \title{Funkcja opisujaca przebieg rzutu i zwiazane z nim zmiany w stadzie gracza i stadzie glownym}
 \usage{
-przebieg_rzutu(stado, stado_glowne)
+przebieg_rzutu(stado)
 }
 \arguments{
 \item{stado}{stan stada gracza}
-
-\item{stado_glowne}{stan stada glownego}
 }
 \description{
 Funkcja opisujaca przebieg rzutu i zwiazane z nim zmiany w stadzie gracza i stadzie glownym

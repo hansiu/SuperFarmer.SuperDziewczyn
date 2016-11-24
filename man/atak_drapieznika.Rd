@@ -4,7 +4,7 @@
 \alias{atak_drapieznika}
 \title{Przeprowadznie atakow drapieznikow}
 \usage{
-atak_drapieznika(lis = FALSE, wilk = FALSE, stado, stado_glowne)
+atak_drapieznika(lis = FALSE, wilk = FALSE, stado, stado_max)
 }
 \arguments{
 \item{lis}{wartosc logiczna: TRUE - pojawil sie lis, FALSE - nie pojawil sie}
@@ -13,7 +13,7 @@ atak_drapieznika(lis = FALSE, wilk = FALSE, stado, stado_glowne)
 
 \item{stado}{stan stada gracza}
 
-\item{stado_glowne}{stan stada glownego}
+\item{stado_max}{maksymalny stan stada gracza}
 }
 \description{
 Przeprowadznie atakow drapieznikow

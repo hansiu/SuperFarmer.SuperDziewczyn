@@ -12,5 +12,5 @@
 dodaj_lub_odejmij_zwierzeta <- function(co, jak=1,stado,stado_glowne){
   stado <- stado + jak * co
   stado_glowne <- stado_glowne - jak * co
-  return(list(Stado=stado,Glowne=stado_glowne))
+  return(stado)
 }
