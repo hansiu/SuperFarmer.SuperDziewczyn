@@ -2,8 +2,10 @@
 
 export(atak_drapieznika)
 export(dodaj_lub_odejmij_zwierzeta)
+export(dokonanie_wymian)
 export(jedno_na_kilka)
 export(jedno_na_kilka_2)
+export(kilka_na_jedno)
 export(przebieg_rzutu)
 export(rzut_kostkami)
 export(zamien_wynik_rzutu_na_wektor)

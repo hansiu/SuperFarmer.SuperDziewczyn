@@ -3,6 +3,7 @@
 #'Funkcja dokonanie_wymian() zwraca nam stany stad po wymianie
 #'
 #'@param stado stado gracza
+#'@param stado_max maksymalny stan stada glownego
 #'@param tabela tabela zmian dostepnych po wymianie
 #'
 #'@export
