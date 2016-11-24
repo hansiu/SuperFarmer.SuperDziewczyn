@@ -34,7 +34,7 @@ jedno_na_kilka_2<- function(wartosc,stado, co, na_co){
   tabela_zmian[[co]] <- (-1)
   if(budzet>0){
     ile_krolikow <- min(budzet,stado_glowne[["krolik"]])
-    tabela_zmian["krolik"] <- tabela_zmian["krolik"] +ile_krolikow
+    tabela_zmian["krolik"] <- tabela_zmian["krolik"] + ile_krolikow
     budzet <-budzet - ile_krolikow
   }
   ifelse(budzet>0 || tabela_zmian[[na_co]]==0, return(FALSE),return(tabela_zmian))
