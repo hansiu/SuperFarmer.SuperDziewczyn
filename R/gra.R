@@ -1,15 +1,16 @@
-#'Funkcja opisujaca przebieg gry
+#'Funkcja opisująca przebieg gry
 #'
 #'@param strategia nazwa funkcji opisującej strategię gracza
 #'
 #'
 #'@export
 
-przegieg_gry <- function(strategia){
+gra <- function(strategia){
   stado <- numeric(7)
   names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   licznik <- 0
-  while(!warunki_wygranej(stado)){
+  warunek_wygranej <- c(1,1,1,1,1,0,0)
+  while(!czy_wygrana(warunek_wygranej,stado)){
   stado <- strategia(stado)
   stado <- przebieg_rzutu(stado)
   }

@@ -12,7 +12,7 @@ przebieg_rzutu <- function(stado){
   czy_wilk <- 'wilk' %in% kostki
   czy_lis <- 'lis' %in% kostki
   if (czy_wilk | czy_lis){
-    stado <-atak_drapieznika(czy_wilk,czy_lis,stado,stado_max)
+    stado <- atak_drapieznika(czy_wilk,czy_lis,stado,stado_max)
   }
 
   wylosowane <- zamien_wynik_rzutu_na_wektor(kostki)
