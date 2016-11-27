@@ -7,9 +7,10 @@
 #'
 #'@export
 
-wygrana <- function(warunki_wygranej,table){
+wygrana <- function(warunek_wygranej,table){
   for(i in 1:7){
-    if(table[[i]]<warunki_wygranej[[i]]) return(FALSE)
-  }
+    if(table[[i]]<warunek_wygranej[[i]]) return(FALSE)}
   return(TRUE)
-}
+  }
+
+

@@ -10,8 +10,13 @@ gra <- function(strategia){
   names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   licznik <- 0
   warunek_wygranej <- c(1,1,1,1,1,0,0)
-  while(!czy_wygrana(warunek_wygranej,stado)){
-  stado <- strategia(stado)
+  names(warunek_wygranej) <- names(stado)
+  while(wygrana(warunek_wygranej,stado)!=TRUE){
+  wymiana <- strategia(stado)
+  stado <- dokonanie_wymian(stado,stado_max,wymiana)
   stado <- przebieg_rzutu(stado)
+  cat(stado,"\n")
+  licznik <- licznik+1
   }
+  return(licznik)
 }
