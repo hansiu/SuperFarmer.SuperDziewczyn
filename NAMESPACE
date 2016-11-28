@@ -3,6 +3,7 @@
 export(atak_drapieznika)
 export(dodaj_lub_odejmij_zwierzeta)
 export(dokonanie_wymian)
+export(gra)
 export(jedno_na_kilka)
 export(jedno_na_kilka_2)
 export(kilka_na_jedno)
