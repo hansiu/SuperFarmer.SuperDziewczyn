@@ -14,8 +14,9 @@ strategia_wymian_1_1_1_1 <- function(stado){
   duze_psy <-1
 
   wartosc_w_krolikach <- numeric(7)
-  names(wartosc_w_krolikach) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
+  names(wartosc_w_krolikach) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
+
 
   if(stado[["kon"]]>= 2){
     wymiana[1:7]<-c(1,1,1,1,-1,0,0)

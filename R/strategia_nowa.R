@@ -6,11 +6,11 @@
 
 strategia_nowa <- function(stado){
   wartosc_w_krolikach <- numeric(7)
-  names(wartosc_w_krolikach) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
+  names(wartosc_w_krolikach) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   stado_max <- numeric(7)
-  names(stado_max) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   stado_max <- c(60,24,20,12,6,4,2)
+  names(stado_max) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   if (stado['kon']>1){
     stado <- dodaj_lub_odejmij_zwierzeta(c(1,1,1,1,-1,0,0),1,stado,stado_max-stado)
   } else {
