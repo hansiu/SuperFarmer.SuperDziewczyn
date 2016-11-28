@@ -2,7 +2,7 @@
 #'
 #'Funkcja wygrana() przyjmuje wektor warunki wygranej oraz tabele zawierajaca stan stada gracza
 #'
-#'@param warunki_wygranej wektor z warunkami zakonczenia gry
+#'@param warunek_wygranej wektor z warunkami zakonczenia gry
 #'@param table stan stada gracza
 #'
 #'@export

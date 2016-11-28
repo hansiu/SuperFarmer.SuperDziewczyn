@@ -4,10 +4,19 @@
 \alias{przebieg_rzutu}
 \title{Funkcja opisujaca przebieg rzutu i zwiazane z nim zmiany w stadzie gracza i stadzie glownym}
 \usage{
-przebieg_rzutu(stado)
+przebieg_rzutu(stado, stado_max, kostka_zielona, kostka_czerwona)
 }
 \arguments{
 \item{stado}{stan stada gracza}
+
+\item{stado_max}{maksymalna wartosc stada glownego}
+
+\item{kostka_zielona}{zwierzeta na kostce zielonej}
+
+\item{kostka_czerwona}{zwierzeta na kostce czerwonej}
+}
+\value{
+stado
 }
 \description{
 Funkcja opisujaca przebieg rzutu i zwiazane z nim zmiany w stadzie gracza i stadzie glownym

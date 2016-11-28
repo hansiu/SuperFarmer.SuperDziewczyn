@@ -1,11 +1,17 @@
 #'Funkcja opisujaca przebieg rzutu i zwiazane z nim zmiany w stadzie gracza i stadzie glownym
 #'
 #'@param stado stan stada gracza
+#'@param stado_max maksymalna wartosc stada glownego
+#'@param kostka_zielona zwierzeta na kostce zielonej
+#'@param  kostka_czerwona zwierzeta na kostce czerwonej
+#'
+#'@return stado
 #'
 #'@export
 
 
-przebieg_rzutu <- function(stado){
+przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
+
   otrzymane <- numeric(7)
   kostki<-rzut_kostkami(kostka_zielona,kostka_czerwona)
 

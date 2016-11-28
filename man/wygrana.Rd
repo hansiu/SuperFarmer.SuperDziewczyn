@@ -4,10 +4,10 @@
 \alias{wygrana}
 \title{Funkcja sprawdzajaca czy spelnione są warunki wygranej}
 \usage{
-wygrana(warunki_wygranej, table)
+wygrana(warunek_wygranej, table)
 }
 \arguments{
-\item{warunki_wygranej}{wektor z warunkami zakonczenia gry}
+\item{warunek_wygranej}{wektor z warunkami zakonczenia gry}
 
 \item{table}{stan stada gracza}
 }
