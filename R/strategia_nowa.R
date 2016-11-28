@@ -18,10 +18,10 @@ strategia_nowa <- function(stado){
       tabela_zmian <- kilka_na_jedno(wartosc_w_krolikach,c(stado[1:4],"kon"=0,stado[6:7]),'kon')
     } else {
       if (stado[['maly_pies']]==0){
-      tabela_zmian <- kilka_na_jedno(wartosc_w_krolikach,c(stado[1:2],"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0),'maly_pies')
+        tabela_zmian <- kilka_na_jedno(wartosc_w_krolikach,c(stado[1:2],"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0),'maly_pies')
       } else {
         tabela_zmian <- jedno_na_kilka(wartosc_w_krolikach,stado,'owca','krolik')
-        }
+      }
     }
     if (tabela_zmian!=FALSE){
       stado <- dodaj_lub_odejmij_zwierzeta(tabela_zmian,1,stado,stado_max-stado)}
