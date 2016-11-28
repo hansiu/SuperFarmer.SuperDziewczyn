@@ -27,7 +27,9 @@ przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
   otrzymane <- numeric(7)
   names(otrzymane) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   #cos tu jest nie tak ale na razie nie moge okreslic co
-  otrzymane <- trunc((stado+wylosowane)/2)
+  for(i in names(otrzymane)){
+    otrzymane[[i]] <- trunc((stado[[i]]+wylosowane[[i]])/2)
+  }
   otrzymane <- dostaniemy(otrzymane,stado,stado_max-stado)
   if (!all(otrzymane==0)){
     stado <- dodaj_lub_odejmij_zwierzeta(otrzymane,1,stado,stado_max-stado)
