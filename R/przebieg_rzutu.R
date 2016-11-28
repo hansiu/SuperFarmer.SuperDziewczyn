@@ -12,7 +12,7 @@
 
 przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
 
-  otrzymane <- numeric(7)
+
   kostki<-rzut_kostkami(kostka_zielona,kostka_czerwona)
 
   czy_wilk <- 'wilk' %in% kostki
@@ -22,7 +22,12 @@ przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
   }
 
   wylosowane <- zamien_wynik_rzutu_na_wektor(kostki)
-  otrzymane <- ifelse(wylosowane == 0, 0, trunc((stado+wylosowane)/2))
+  names(wylosowane) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
+
+  otrzymane <- numeric(7)
+  names(otrzymane) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
+  #cos tu jest nie tak ale na razie nie moge okreslic co
+  otrzymane <- trunc((stado+wylosowane)/2)
   otrzymane <- dostaniemy(otrzymane,stado,stado_max-stado)
   if (!all(otrzymane==0)){
     stado <- dodaj_lub_odejmij_zwierzeta(otrzymane,1,stado,stado_max-stado)
