@@ -1,5 +1,19 @@
-test_that("Test jedno_na_kilka2",{
+test_that("Wymiana jedno na kilka 2 przyjmuje cztery argumenty i zwraca wektor dlugosci 7",{
+  stado <- c(1,1,1,1,1,0,0)
+  names(stado) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
   expect_error(jedno_na_kilka_2())
-  expect_error(jedno_na_kilka_2(wartosc_w_krolikach))
-  expect_error(jedno_na_kilka_2(na_co="krolik"))
+  expect_error(jedno_na_kilka_2(stado))
+  expect_error(jedno_na_kilka_2(wartosc_w_krolikach,"krolik"))
+  expect_error(jedno_na_kilka_2(wartosc_w_krolikach,"owca","krolik"))
+  expect_is(jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca"),"numeric")
+  expect_length(jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca"),7)
+  expect_true(is.logical(jedno_na_kilka_2(wartosc_w_krolikach,stado,"owca","krowa")))
+})
+test_that("Wymiana daje poprawne wyniki",{
+  stado <- c(1,1,1,1,1,0,0)
+  names(stado) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
+  expect_equivalent(jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca"),c(6,1,0,-1,0,4,0))
+  stado2 <- c(1,1,1,1,1,0,0)
+  names(stado2) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
+  expect_equivalent(jedno_na_kilka_2(wartosc_w_krolikach,stado2,"krowa","swinia"),c(0,0,1,-1,0,4,0))
 })
