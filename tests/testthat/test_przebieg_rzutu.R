@@ -1,0 +1,11 @@
+test_that("Przebieg Rzutu przyjmuje cztery wektory i zwraca wektor",{
+  stado <-c(0,0,0,0,0,0,0)
+  names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
+  expect_error(przebieg_rzutu())
+  expect_error(przebieg_rzutu(stado))
+  expect_error(przebieg_rzutu(stado,stado_max))
+  expect_error(przebieg_rzutu(stado,stado_max,kostka_zielona))
+  expect_is(przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona),"numeric")
+  expect_named(przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona),c('krolik', 'owca','swinia','krowa','kon','maly_pies','duzy_pies'))
+  expect_length(przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona),7)
+})

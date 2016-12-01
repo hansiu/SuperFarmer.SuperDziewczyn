@@ -29,9 +29,9 @@ jedno_na_kilka <- function(wartosc,stado,co,na_co){
   budzet_temp <- budzet - tabela_zmian[[na_co]]*cena
   i <- 7
   while(budzet_temp>0 && i>=1){
-    cena <- wartosc[[colnames(tabela_zmian[[i]])]]
-    tabela_zmian[[i]] <- min(floor((budzet_temp)/cena),stado_glowne[[i]])
-    budzet_temp <- budzet_temp - tabela_zmian[[i]]*cena
+    cena <- wartosc[[names(tabela_zmian[i])]]
+    tabela_zmian[i] <- min(floor((budzet_temp)/cena),stado_glowne[i])
+    budzet_temp <- budzet_temp - tabela_zmian[i]*cena
 
     i <- i-1
   }

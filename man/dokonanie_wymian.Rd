@@ -10,8 +10,6 @@ dokonanie_wymian(stado, tabela)
 \item{stado}{stado gracza}
 
 \item{tabela}{tabela zmian dostepnych po wymianie}
-
-\item{stado_max}{maksymalny stan stada glownego}
 }
 \description{
 Funkcja dokonanie_wymian() zwraca nam stany stad po wymianie

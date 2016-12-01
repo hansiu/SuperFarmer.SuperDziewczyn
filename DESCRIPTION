@@ -2,13 +2,13 @@ Package: SuperFarmer.SuperDziewczyn
 Title: SuperFarmer
 Version: 0.0.0.9000
 Authors@R: c(person("Aleksandra", "Dabrowska", email = "ad345131@students.mimuw.edu.pl", role = "cre"),person("Hanna","Kranas", email = "hk335070@students.mimuw.edu.pl", role = "aut"))
-Description: Pakiet zawiera funkcje potrzebne do symulacji gry w SuperFarmera
-    oraz wizualizacji srenich czasow trwania gry przy ustalonej strategii.
+Description: Pakiet zawiera funkcje potrzebne do symulacji gry w SuperFarmera. Wynikiem wywołania głównej funkcji badaj_gre są statystyki związane z rozkładem czasu trwania gier przy 10000 powtórzeniach oraz wizualizacje czasow trwania gier przy ustalonej strategii.
 Depends: R (>= 3.0.0)
 License: GPL
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr, roxygen2
+Imports: dplyr, roxygen2,
+    ggplot2
 RoxygenNote: 5.0.1
 NeedsCompilation: no
 Packaged: 2016-11-19 20:57:19 UTC; O
