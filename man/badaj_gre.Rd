@@ -4,13 +4,15 @@
 \alias{badaj_gre}
 \title{Funkcja powtarzajaca gre 10000 razy}
 \usage{
-badaj_gre(strategia)
+badaj_gre(strategia, powtorzenia = 10000)
 }
 \arguments{
 \item{strategia}{strategia ktora chcemy grac}
+
+\item{powtorzenia}{liczba powtorzen gier do stestowania, domyslnie 10000}
 }
 \value{
-podstawowe statystki dla czasow trwania gier
+lista dwuelementowa zawierajaca podstawowe statystyki i wykres rozkladu czasow gry przy zadanej liczbie powtorzen
 }
 \description{
 Funkcja powtarzajaca gre 10000 razy

@@ -1,21 +1,27 @@
 #'Funkcja powtarzajaca gre 10000 razy
 #'
 #'@param strategia strategia ktora chcemy grac
-#'@return podstawowe statystki dla czasow trwania gier
+#'@param powtorzenia liczba powtorzen gier do stestowania, domyslnie 10000
+#'
+#'@return lista dwuelementowa zawierajaca podstawowe statystyki i wykres rozkladu czasow gry przy zadanej liczbie powtorzen
+#'
+#'@importFrom ggplot2 ggplot
+#'@importFrom ggplot2 aes
+#'@importFrom ggplot2 geom_histogram
+#'@importFrom ggplot2 labs
 #'
 #'@export
 
-badaj_gre <- function(strategia){
+badaj_gre <- function(strategia,powtorzenia=10000){
   czasy <- data.frame()
-  for (i in 1:100){
+  for (i in 1:powtorzenia){
     czasy[i,1] <-gra(strategia)
   }
   statystyki <- summary(czasy)
-  print(length(czasy[,1]))
   print(statystyki)
-  ggplot2::ggplot(data=czasy, ggplot2::aes(czasy$V1)) + ggplot2::geom_histogram(binwidth = 1,
+  ggplot(data=czasy, aes(czasy$V1)) + geom_histogram(binwidth = 1,
                                                     col="blue",
                                                     fill="green") +
-    ggplot2::labs(title="Rozklad czasu gry") +
-    ggplot2::labs(x="Czas gry [kroki]", y="Liczba gier")
-}
+    labs(title="Rozklad czasu gry") +
+    labs(x="Czas gry [kroki]", y="Liczba gier")
+  }
