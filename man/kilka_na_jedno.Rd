@@ -14,6 +14,6 @@ kilka_na_jedno(wartosc, tabela_co, na_co)
 \item{na_co}{nazwa zwierze ktore chcemy dostac}
 }
 \description{
-Funkcja kilka_na_jedno() otrzymuje nazwany wektor zawierajacy liczbe zwierzat ktAlre chcemy wymienić oraz nazwe zwierzecia ktore chcemy otrzymac
+Funkcja kilka_na_jedno() otrzymuje nazwany wektor zawierajacy liczbe zwierzat które chcemy wymienić oraz nazwe zwierzecia ktore chcemy otrzymac
 }
 

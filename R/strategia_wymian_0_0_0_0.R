@@ -1,17 +1,17 @@
-#'Strategia wymian z zalozeniem ze zawsze chcemy miec jednego krolika, jedna owce, jednego malego psa i jednego duzego psa
+#'Strategia wymian z zalozeniem ze gramy va banque
 #'
 #'@param stado stado gracza
 #'@return wymiany ze strategii
 #'
 #'@export
 
-strategia_wymian_1_1_1_1 <- function(stado){
+strategia_wymian_0_0_0_0 <- function(stado){
   wymiana<-numeric(7)
   names(wymiana) <-c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
-  kroliki <- 1
-  owce <-1
-  male_psy <- 1
-  duze_psy <-1
+  kroliki <- 0
+  owce <-0
+  male_psy <- 0
+  duze_psy <-0
 
   wartosc_w_krolikach <- numeric(7)
   wartosc_w_krolikach <- c(1,6,12,36,72,6,36)

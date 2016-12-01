@@ -8,9 +8,7 @@
 #'
 #'@export
 
-dokonanie_wymian <- function(stado, stado_max,tabela){
-  stado_glowne <- stado_max - stado
+dokonanie_wymian <- function(stado,tabela){
   stado <- stado + tabela
-  stado_glowne <- stado_glowne - tabela
   return(stado)
 }

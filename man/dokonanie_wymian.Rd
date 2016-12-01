@@ -4,14 +4,14 @@
 \alias{dokonanie_wymian}
 \title{Dokonanie wymian zwiazanych ze strategia gracza}
 \usage{
-dokonanie_wymian(stado, stado_max, tabela)
+dokonanie_wymian(stado, tabela)
 }
 \arguments{
 \item{stado}{stado gracza}
 
-\item{stado_max}{maksymalny stan stada glownego}
-
 \item{tabela}{tabela zmian dostepnych po wymianie}
+
+\item{stado_max}{maksymalny stan stada glownego}
 }
 \description{
 Funkcja dokonanie_wymian() zwraca nam stany stad po wymianie

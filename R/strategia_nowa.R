@@ -23,7 +23,7 @@ strategia_nowa <- function(stado){
         tabela_zmian <- jedno_na_kilka(wartosc_w_krolikach,stado,'owca','krolik')
       }
     }
-    if (tabela_zmian!=FALSE){
+    if (!is.logical(tabela_zmian)){
       stado <- dodaj_lub_odejmij_zwierzeta(tabela_zmian,1,stado,stado_max-stado)}
   }
   return(stado)

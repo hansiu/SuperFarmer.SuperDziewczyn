@@ -11,5 +11,6 @@ badaj_gre <- function(strategia){
     czasy[i,1] <-gra(strategia)
   }
   statystyki <- summary(czasy)
+  print(length(czasy[,1]))
   return(statystyki)
 }

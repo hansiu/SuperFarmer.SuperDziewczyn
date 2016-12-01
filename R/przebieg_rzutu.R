@@ -11,14 +11,11 @@
 
 
 przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
-
-
   kostki<-rzut_kostkami(kostka_zielona,kostka_czerwona)
-
   czy_wilk <- 'wilk' %in% kostki
   czy_lis <- 'lis' %in% kostki
   if (czy_wilk | czy_lis){
-    stado <- atak_drapieznika(czy_wilk,czy_lis,stado,stado_max)
+    stado <- atak_drapieznika(czy_lis,czy_wilk,stado,stado_max)
   }
 
   wylosowane <- zamien_wynik_rzutu_na_wektor(kostki)
@@ -28,7 +25,11 @@ przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
   names(otrzymane) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   #cos tu jest nie tak ale na razie nie moge okreslic co
   for(i in names(otrzymane)){
-    otrzymane[[i]] <- trunc((stado[[i]]+wylosowane[[i]])/2)
+    if (wylosowane[[i]] == 0){
+      otrzymane[[i]] <- 0
+    } else{
+      otrzymane[[i]] <- trunc((stado[[i]]+wylosowane[[i]])/2)
+    }
   }
   otrzymane <- dostaniemy(otrzymane,stado,stado_max-stado)
   if (!all(otrzymane==0)){

@@ -18,8 +18,7 @@ gra <- function(strategia){
   kostka_zielona <- c("krolik","krolik","krolik","krolik","krolik","krolik","owca",   "owca" ,"owca","swinia","krowa","wilk")
   kostka_czerwona <- c("krolik","krolik","krolik","krolik","krolik","krolik","owca","owca","swinia","swinia","kon", "lis")
   while(wygrana(warunek_wygranej,stado)!=TRUE){
-    wymiana <- strategia(stado)
-    stado <- dokonanie_wymian(stado,stado_max,wymiana)
+    stado <- strategia(stado)
     stado <- przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona)
     licznik <- licznik+1
   }
