@@ -17,7 +17,7 @@ jedno_na_kilka <- function(wartosc,stado,co,na_co){
   }
   #tylko ta funkcja ma jeden feler bierze np krowe i kupuje tyle ile sie da na przykald owiec wiec czesto jest tak ze mamy -1 krowe i +6 owiec zadnego innego zwierzecia nie dostajemy
   stado_max <- c(60,24,20,12,6,4,2)
-  stado_glowne <- stado_max-stado #trzeba wziac jeszcze zeby nie zwracalo ujemnych?fora po wspolrzednych?
+  stado_glowne <- stado_max-stado
   names(stado_glowne) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   budzet <- wartosc[[co]]
   cena <- wartosc[[na_co]]
