@@ -9,7 +9,6 @@ test_that("Wymiana jedno na kilka 2 przyjmuje cztery argumenty i zwraca wektor d
   expect_is(jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca"),"numeric")
   expect_length(jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca"),7)
   expect_true(is.logical(jedno_na_kilka_2(wartosc_w_krolikach,stado,"owca","krowa")))
-  expect_output(jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca"), "Named vector")
 })
 test_that("Wymiana daje poprawne wyniki",{
   stado <- c(1,1,1,1,1,0,0)
