@@ -19,7 +19,9 @@ atak_drapieznika(czy_lis = FALSE, czy_wilk = FALSE, stado, stado_max)
 Przeprowadznie atakow drapieznikow
 }
 \examples{
-atak_drapieznika(FALSE,FALSE,c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1),stado_max)
-atak_drapieznika(TRUE,FALSE,c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1),stado_max)
+stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
+atak_drapieznika(FALSE,FALSE,stado,stado_max)
+stado_gracza <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
+atak_drapieznika(TRUE,FALSE,stado_gracza,stado_max)
 }
 

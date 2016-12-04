@@ -19,7 +19,9 @@ dodaj_lub_odejmij_zwierzeta(co, jak = 1, stado, stado_glowne)
 Funkcja zmieniajaca stan stad: gracza i glownego
 }
 \examples{
-dodaj_lub_odejmij_zwierzeta(c("krolik"=1,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0),1,stado)
-dodaj_lub_odejmij_zwierzeta(c("krolik"=1,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0),-1,stado)
+tabela <- c("krolik"=1,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
+dodaj_lub_odejmij_zwierzeta(tabela,1,stado)
+co <- c("krolik"=1,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
+dodaj_lub_odejmij_zwierzeta(co,-1,stado)
 }
 

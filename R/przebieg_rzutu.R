@@ -8,7 +8,8 @@
 #'@return stado
 #'
 #'@examples
-#'przebieg_rzutu(c("krolik"=1,"owca"=2,"swinia"=2,"krowa"=2,"kon"=0,"maly_pies"=0,"duzy_pies"=0),stado_max,kostka_zielona,kostka_czerwona)
+#'stado_gracza <- c("krolik"=1,"owca"=2,"swinia"=2,"krowa"=2,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
+#'przebieg_rzutu(stado_gracza,stado_max,kostka_zielona,kostka_czerwona)
 #'
 #'@export
 

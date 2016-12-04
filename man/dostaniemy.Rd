@@ -17,7 +17,9 @@ dostaniemy(tyle_chce_wziac, stado, stado_glowne)
 Funkcja wyznaczajaca ile zwierzat mozemy otrzymac ze stada
 }
 \examples{
-dostaniemy(c(1,1,1,0,0,0,0),c(1,1,2,3,1,0,1),stado_max-c(1,1,2,3,1,0,1))
+chcemy <- c(1,1,1,0,0,0,0)
+stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
+dostaniemy(chcemy,stado,stado_max-stado)
 
 }
 

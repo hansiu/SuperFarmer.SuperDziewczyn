@@ -5,7 +5,8 @@
 #'@return saldo czyli wartosc tabeli
 #'
 #'@examples
-#'stado_w_krolikach(wartosc_w_krolikach,c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1))
+#'tabela <- c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
+#'stado_w_krolikach(wartosc_w_krolikach,tabela)
 #'
 #'@export
 

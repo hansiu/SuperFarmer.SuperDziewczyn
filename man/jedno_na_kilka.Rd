@@ -22,6 +22,7 @@ tabela zmian, ktAlre na daną chwilę moLLna wykonać
 Funkcja jedno_na_kilka() zwraca nam tabele zmian ktAlre moLLna wykonać przy zaproponowanej wymianie
 }
 \examples{
+stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
 jedno_na_kilka(wartosc_w_krolikach, stado, "krowa","owca")
 
 }
