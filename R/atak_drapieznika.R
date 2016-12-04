@@ -5,8 +5,11 @@
 #'@param stado stan stada gracza
 #'@param stado_max maksymalny stan stada gracza
 #'
-#'
+#'@examples
+#'atak_drapieznika(FALSE,FALSE,c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1),stado_max)
+#'atak_drapieznika(TRUE,FALSE,c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1),stado_max)
 #'@export
+
 
 atak_drapieznika <- function(czy_lis = FALSE, czy_wilk = FALSE,stado,stado_max){
   if (czy_wilk == TRUE ){

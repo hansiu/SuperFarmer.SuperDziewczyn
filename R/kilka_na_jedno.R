@@ -4,7 +4,10 @@
 #'
 #'@param wartosc wartosc zwierzat wyrazona w krolikach
 #'@param tabela_co tabela ze zwierzetami ktore chcemy oddac
-#'@param na_co nazwa zwierze ktore chcemy dostac
+#'@param na_co nazwa zwierzecia ktore chcemy dostac
+#'
+#'@examples
+#'kilka_na_jedno(wartosc_w_krolikach,c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0),"krowa")
 #'
 #'@export
 

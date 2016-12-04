@@ -8,6 +8,8 @@
 #'@param na_co zwierze najbardziej pożądane przez gracza
 #'
 #'@return tabela_zmian
+#'@examples
+#'jedno_na_kilka2(wartosc_w_krolikach,stado,"krowa","owca")
 #'
 #'@export
 

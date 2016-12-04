@@ -12,4 +12,7 @@ zamien_wynik_rzutu_na_wektor(wynik)
 \description{
 Zamieniamy wynik rzutu na wektor
 }
+\examples{
+zamien_wynik_rzutu_na_wektor(c("krolik","owca"))
+}
 

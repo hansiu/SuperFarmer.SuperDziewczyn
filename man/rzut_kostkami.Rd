@@ -13,6 +13,8 @@ rzut_kostkami(a, b)
 }
 \value{
 Wektor zawierajacy nazwy zwierzat wylosowanych na kostce zielonej i czerwonej odpowiednio
+
+rzut_kostkami(kostka_zielona,kostka_czerwona)
 }
 \description{
 Funkcja rzut_kostkami() wyznacza parę wartosci - nazwy zwierzat na obu kostkach.

@@ -16,4 +16,8 @@ dostaniemy(tyle_chce_wziac, stado, stado_glowne)
 \description{
 Funkcja wyznaczajaca ile zwierzat mozemy otrzymac ze stada
 }
+\examples{
+dostaniemy(c(1,1,1,0,0,0,0),c(1,1,2,3,1,0,1),stado_max-c(1,1,2,3,1,0,1))
+
+}
 

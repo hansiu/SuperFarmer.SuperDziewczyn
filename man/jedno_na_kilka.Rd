@@ -21,4 +21,8 @@ tabela zmian, ktAlre na daną chwilę moLLna wykonać
 \description{
 Funkcja jedno_na_kilka() zwraca nam tabele zmian ktAlre moLLna wykonać przy zaproponowanej wymianie
 }
+\examples{
+jedno_na_kilka(wartosc_w_krolikach, stado, "krowa","owca")
+
+}
 

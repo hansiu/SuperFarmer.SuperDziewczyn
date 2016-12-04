@@ -21,4 +21,8 @@ tabela_zmian
 \description{
 Zamieniamy jedno zwierze na kilka innych, jednemu ze zwierzat poLLądanych nadajemy pewien priorytet - chcemy mieć jedną sztukę tego zwierzęcia, z reszty dostepnych srodkow kupujemy inne zwierzeta
 }
+\examples{
+jedno_na_kilka2(wartosc_w_krolikach,stado,"krowa","owca")
+
+}
 

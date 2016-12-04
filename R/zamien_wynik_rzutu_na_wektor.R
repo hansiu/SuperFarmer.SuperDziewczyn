@@ -2,6 +2,8 @@
 #'
 #'@param wynik Wynik rzutu
 #'
+#'@examples
+#'zamien_wynik_rzutu_na_wektor(c("krolik","owca"))
 #'@export
 
 

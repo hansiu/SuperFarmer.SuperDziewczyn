@@ -10,6 +10,8 @@
 #'@importFrom ggplot2 geom_histogram
 #'@importFrom ggplot2 labs
 #'
+#'@examples
+#'badaj_gre(strategia_nowa,100)
 #'@export
 
 badaj_gre <- function(strategia,powtorzenia=10000){

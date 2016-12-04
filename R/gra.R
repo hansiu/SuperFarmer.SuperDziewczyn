@@ -2,6 +2,8 @@
 #'
 #'@param strategia nazwa funkcji opisującej strategię gracza
 #'
+#'@examples
+#'gra(strategia_nowa)
 #'
 #'@export
 

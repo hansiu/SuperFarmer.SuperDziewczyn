@@ -4,6 +4,8 @@
 #'@param stado Stan stada gracza
 #'@param stado_glowne Stan stada glownego
 #'
+#'@examples
+#'dostaniemy(c(1,1,1,0,0,0,0),c(1,1,2,3,1,0,1),stado_max-c(1,1,2,3,1,0,1))
 #'
 
 

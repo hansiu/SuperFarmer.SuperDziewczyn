@@ -17,4 +17,7 @@ lista dwuelementowa zawierajaca podstawowe statystyki i wykres rozkladu czasow g
 \description{
 Funkcja powtarzajaca gre 10000 razy
 }
+\examples{
+badaj_gre(strategia_nowa,100)
+}
 

@@ -6,6 +6,8 @@
 #'@param b wektor zawierajacy zwierzeta na kostce czerwonej
 #'@return Wektor zawierajacy nazwy zwierzat wylosowanych na kostce zielonej i czerwonej odpowiednio
 #'
+#'rzut_kostkami(kostka_zielona,kostka_czerwona)
+#'
 #'@export
 
 rzut_kostkami <- function(a,b){

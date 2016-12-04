@@ -8,6 +8,9 @@
 #'@param na_co nazwa zwierzęcia które chcemy otrzymać
 #'@return tabela zmian, które na daną chwilę można wykonać
 #'
+#'@examples
+#'jedno_na_kilka(wartosc_w_krolikach, stado, "krowa","owca")
+#'
 #'@export
 
 

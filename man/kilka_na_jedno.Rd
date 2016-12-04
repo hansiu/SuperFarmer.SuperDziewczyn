@@ -11,9 +11,13 @@ kilka_na_jedno(wartosc, tabela_co, na_co)
 
 \item{tabela_co}{tabela ze zwierzetami ktore chcemy oddac}
 
-\item{na_co}{nazwa zwierze ktore chcemy dostac}
+\item{na_co}{nazwa zwierzecia ktore chcemy dostac}
 }
 \description{
 Funkcja kilka_na_jedno() otrzymuje nazwany wektor zawierajacy liczbe zwierzat ktAlre chcemy wymienić oraz nazwe zwierzecia ktore chcemy otrzymac
+}
+\examples{
+kilka_na_jedno(wartosc_w_krolikach,c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0),"krowa")
+
 }
 

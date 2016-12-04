@@ -17,4 +17,8 @@ saldo czyli wartosc tabeli
 \description{
 Funkcja obliczajaca wartosc naszego stada
 }
+\examples{
+stado_w_krolikach(wartosc_w_krolikach,c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1))
+
+}
 
