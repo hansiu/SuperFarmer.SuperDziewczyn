@@ -13,15 +13,17 @@
 #'@export
 
 badaj_gre <- function(strategia,powtorzenia=10000){
-  czasy <- data.frame()
+  czasy <- c()
   for (i in 1:powtorzenia){
-    czasy[i,1] <-gra(strategia)
+    czasy[i] <- gra(strategia)
   }
+  czasy <- as.data.frame(czasy)
+  colnames(czasy) <- "Czas_gry"
   statystyki <- summary(czasy)
   print(statystyki)
-  ggplot(data=czasy, aes(czasy$V1)) + geom_histogram(binwidth = 1,
-                                                    col="blue",
-                                                    fill="green") +
+  ggplot(data=czasy, aes(czasy$Czas_gry)) + geom_histogram(binwidth = 1,
+                                                     col="blue",
+                                                     fill="green") +
     labs(title="Rozklad czasu gry") +
     labs(x="Czas gry [kroki]", y="Liczba gier")
-  }
+}
