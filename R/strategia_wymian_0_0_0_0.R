@@ -28,7 +28,7 @@ strategia_wymian_0_0_0_0 <- function(stado){
     stado <- dokonanie_wymian(stado,wymiana)
     return(stado)
   }
-  damy<-c( max(stado[["krolik"]]-kroliki,0),max(stado[["owca"]]-owce,0),0,0,0,max(stado[["maly_pies"]]-male_psy,0),max(stado[["duzy_pies"]]-duze_psy))
+  damy<-c( max(stado[["krolik"]]-kroliki,0),max(stado[["owca"]]-owce,0),stado["swinia"],stado["krowa"],0,max(stado[["maly_pies"]]-male_psy,0),max(stado[["duzy_pies"]]-duze_psy))
   names(damy) <-  c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   for(zw in c("kon","maly_pies","duzy_pies","owca")){
     wymiana <-kilka_na_jedno(wartosc_w_krolikach,damy,zw)
@@ -41,6 +41,5 @@ strategia_wymian_0_0_0_0 <- function(stado){
       return(stado)
     }
   }
-  stado <- dokonanie_wymian(stado,wymiana)
   return(stado)
 }

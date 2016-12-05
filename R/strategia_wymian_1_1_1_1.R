@@ -19,7 +19,7 @@ strategia_wymian_1_1_1_1 <- function(stado){
 
 
   if(stado[["kon"]]>= 2){
-    wymiana[1:7]<-c(1,1,1,1,-1,0,0)
+    wymiana[1:7]<-c(6,1,2,1,-1,0,0)
     stado <- dokonanie_wymian(stado,wymiana)
     return(stado)
   }
@@ -41,6 +41,5 @@ strategia_wymian_1_1_1_1 <- function(stado){
       return(stado)
     }
   }
-  stado <- dokonanie_wymian(stado,wymiana)
   return(stado)
 }

@@ -13,13 +13,13 @@ jedno_na_kilka_2(wartosc, stado, co, na_co)
 
 \item{co}{zwierze ktore chcemy oddac}
 
-\item{na_co}{zwierze najbardziej poLLądane przez gracza}
+\item{na_co}{zwierze najbardziej pożądane przez gracza}
 }
 \value{
 tabela_zmian
 }
 \description{
-Zamieniamy jedno zwierze na kilka innych, jednemu ze zwierzat poLLądanych nadajemy pewien priorytet - chcemy mieć jedną sztukę tego zwierzęcia, z reszty dostepnych srodkow kupujemy inne zwierzeta
+Zamieniamy jedno zwierze na kilka innych, jednemu ze zwierzat pożądanych nadajemy pewien priorytet - chcemy mieć jedną sztukę tego zwierzęcia, z reszty dostepnych srodkow kupujemy inne zwierzeta
 }
 \examples{
 stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
