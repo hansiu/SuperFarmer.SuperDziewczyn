@@ -11,15 +11,15 @@ jedno_na_kilka(wartosc, stado, co, na_co)
 
 \item{stado}{stan stada gracza}
 
-\item{co}{nazwa zwierzęcia które chcemy oddać}
+\item{co}{nazwa zwierzęcia ktAlre chcemy oddać}
 
-\item{na_co}{nazwa zwierzęcia które chcemy otrzymać}
+\item{na_co}{nazwa zwierzęcia ktAlre chcemy otrzymać}
 }
 \value{
-tabela zmian, które na daną chwilę można wykonać
+tabela zmian, ktAlre na daną chwilę moLLna wykonać
 }
 \description{
-Funkcja jedno_na_kilka() zwraca nam tabele zmian które można wykonać przy zaproponowanej wymianie
+Funkcja jedno_na_kilka() zwraca nam tabele zmian ktAlre moLLna wykonać przy zaproponowanej wymianie
 }
 \examples{
 stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
