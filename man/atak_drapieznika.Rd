@@ -21,6 +21,8 @@ Przeprowadznie atakow drapieznikow
 \examples{
 stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
 atak_drapieznika(FALSE,FALSE,stado,stado_max)
+stado_max <- c(60,24,20,12,6,4,2)
+names(stado_max) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
 stado_gracza <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
 atak_drapieznika(TRUE,FALSE,stado_gracza,stado_max)
 }

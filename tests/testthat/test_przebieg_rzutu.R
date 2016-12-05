@@ -1,6 +1,10 @@
 test_that("Przebieg Rzutu przyjmuje cztery wektory i zwraca wektor",{
   stado <-c(0,0,0,0,0,0,0)
   names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
+  kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
+  kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
+  stado_max <- c(60,24,20,12,6,4,2)
+  names(stado_max) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
   expect_error(przebieg_rzutu())
   expect_error(przebieg_rzutu(stado))
   expect_error(przebieg_rzutu(stado,stado_max))

@@ -23,7 +23,9 @@ Zamieniamy jedno zwierze na kilka innych, jednemu ze zwierzat poLLądanych nadaj
 }
 \examples{
 stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
-jedno_na_kilka2(wartosc_w_krolikach,stado,"krowa","owca")
+wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
+names(wartosc_w_krolikach) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
+jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca")
 
 }
 

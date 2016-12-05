@@ -1,4 +1,6 @@
 test_that("Zamiana wektora napisowego rzutu daje wektor liczbowy",{
+  kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
+  kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
   expect_error(zamien_wynik_rzutu_na_wektor())
   expect_true(is.vector(zamien_wynik_rzutu_na_wektor(rzut_kostkami(kostka_zielona,kostka_czerwona))))
   expect_true(is.vector(zamien_wynik_rzutu_na_wektor(c('krolik','wilk'))))

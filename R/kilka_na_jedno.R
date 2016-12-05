@@ -8,6 +8,8 @@
 #'
 #'@examples
 #'tabela_co <-c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
+#'wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
+#'names(wartosc_w_krolikach) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
 #'kilka_na_jedno(wartosc_w_krolikach,tabela_co,"krowa")
 #'
 #'@export

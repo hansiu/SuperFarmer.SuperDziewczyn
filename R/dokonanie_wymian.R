@@ -6,7 +6,9 @@
 #'@param tabela tabela zmian dostepnych po wymianie
 #'
 #'@examples
-#'dokonanie_wymian(stado,c("krolik"=1,"owca"=1,"swinia"=2,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0))
+#'tabela <- c("krolik"=1,"owca"=1,"swinia"=2,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
+#'stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
+#'dokonanie_wymian(stado,tabela)
 #'
 #'@export
 

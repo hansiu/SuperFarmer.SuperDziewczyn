@@ -1,4 +1,6 @@
 test_that("Kostki to wektory napisów o długości 12",{
+  kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
+  kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
   expect_true(is.vector(kostka_czerwona))
   expect_true(is.vector(kostka_zielona))
   expect_is(kostka_czerwona,"character")
@@ -11,6 +13,8 @@ test_that("Kostki to wektory napisów o długości 12",{
 })
 
 test_that("Liczby zwierząt na kostkach są prawidłowe",{
+  kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
+  kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
   expect_true(all(table(kostka_czerwona)==c(1,6,1,2,2)))
   expect_true(all(table(kostka_zielona)==c(6,1,3,1,1)))
   ## w sumie można to rozbić na dla każdego zwierzęcia

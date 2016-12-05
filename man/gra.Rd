@@ -12,8 +12,4 @@ gra(strategia)
 \description{
 Funkcja opisująca przebieg gry
 }
-\examples{
-gra(strategia_nowa)
-
-}
 
