@@ -16,4 +16,5 @@ test_that("Wymiana daje poprawne wyniki",{
   wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
   names(wartosc_w_krolikach) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
   expect_equivalent(jedno_na_kilka(wartosc_w_krolikach,stado,"krowa","owca"),c(0,6,0,-1,0,0,0))
+  expect_named(jedno_na_kilka(wartosc_w_krolikach,stado,"krowa","owca"),c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies"))
 })

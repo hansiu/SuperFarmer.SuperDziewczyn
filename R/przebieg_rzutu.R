@@ -11,8 +11,10 @@
 #'stado_gracza <- c("krolik"=1,"owca"=2,"swinia"=2,"krowa"=2,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
 #'stado_max <- c(60,24,20,12,6,4,2)
 #'names(stado_max) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
-#'kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
-#'kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
+#'kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca",
+#'"swinia","swinia","kon","lis")
+#'kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca",
+#'"owca","swinia","krowa","wilk")
 #'przebieg_rzutu(stado_gracza,stado_max,kostka_zielona,kostka_czerwona)
 #'
 #'@export

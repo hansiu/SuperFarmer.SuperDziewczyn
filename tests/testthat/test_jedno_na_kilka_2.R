@@ -26,4 +26,5 @@ test_that("Wymiana daje poprawne wyniki",{
   stado3 <- c(1,1,1,1,1,0,0)
   names(stado3) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
   expect_equivalent(jedno_na_kilka_2(wartosc_w_krolikach,stado3,"kon","owca"),c(6,1,0,0,-1,4,1))
+  expect_named(jedno_na_kilka_2(wartosc_w_krolikach,stado3,"kon","owca"),c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies"))
 })
