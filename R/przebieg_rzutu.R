@@ -14,19 +14,18 @@
 #'kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
 #'kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
 #'przebieg_rzutu(stado_gracza,stado_max,kostka_zielona,kostka_czerwona)
-#'
-#'@export
 
 
-przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
-  kostki<-rzut_kostkami(kostka_zielona,kostka_czerwona)
+
+.przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
+  kostki<-.rzut_kostkami(kostka_zielona,kostka_czerwona)
   czy_wilk <- 'wilk' %in% kostki
   czy_lis <- 'lis' %in% kostki
   if (czy_wilk | czy_lis){
-    stado <- atak_drapieznika(czy_lis,czy_wilk,stado,stado_max)
+    stado <- .atak_drapieznika(czy_lis,czy_wilk,stado,stado_max)
   }
 
-  wylosowane <- zamien_wynik_rzutu_na_wektor(kostki)
+  wylosowane <- .zamien_wynik_rzutu_na_wektor(kostki)
   names(wylosowane) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
 
   otrzymane <- numeric(7)
@@ -39,9 +38,9 @@ przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
       otrzymane[[i]] <- trunc((stado[[i]]+wylosowane[[i]])/2)
     }
   }
-  otrzymane <- dostaniemy(otrzymane,stado,stado_max-stado)
+  otrzymane <- .dostaniemy(otrzymane,stado,stado_max-stado)
   if (!all(otrzymane==0)){
-    stado <- dodaj_lub_odejmij_zwierzeta(otrzymane,1,stado,stado_max-stado)
+    stado <- .dodaj_lub_odejmij_zwierzeta(otrzymane,1,stado,stado_max-stado)
   }
 
   return(stado)

@@ -9,10 +9,9 @@
 #'wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
 #'names(wartosc_w_krolikach) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
 #'stado_w_krolikach(wartosc_w_krolikach,tabela)
-#'
-#'@export
 
-stado_w_krolikach <- function(wartosc_w_krolikach,tabela){
+
+.stado_w_krolikach <- function(wartosc_w_krolikach,tabela){
   saldo <- 0
   for(i in 1:length(tabela)){
     saldo <- saldo + tabela[[i]]*wartosc_w_krolikach[[i]]

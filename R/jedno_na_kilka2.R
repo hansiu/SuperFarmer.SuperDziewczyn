@@ -13,10 +13,9 @@
 #'wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
 #'names(wartosc_w_krolikach) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
 #'jedno_na_kilka_2(wartosc_w_krolikach,stado,"krowa","owca")
-#'
-#'@export
 
-jedno_na_kilka_2<- function(wartosc,stado, co, na_co){
+
+.jedno_na_kilka_2<- function(wartosc,stado, co, na_co){
   stado_max <- c(60,24,20,12,6,4,2)
   names(stado_max)<-c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   stado_glowne <- stado_max-stado

@@ -4,7 +4,7 @@
 \alias{badaj_gre}
 \title{Funkcja powtarzajaca gre 10000 razy}
 \usage{
-badaj_gre(strategia, powtorzenia = 10000)
+badaj_gre(strategia, powtorzenia = 100)
 }
 \arguments{
 \item{strategia}{strategia ktora chcemy grac}

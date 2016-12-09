@@ -11,10 +11,9 @@
 #'wartosc_w_krolikach <- c(1,6,12,36,72,6,36)
 #'names(wartosc_w_krolikach) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
 #'kilka_na_jedno(wartosc_w_krolikach,tabela_co,"krowa")
-#'
-#'@export
 
-kilka_na_jedno <- function(wartosc,tabela_co, na_co){
+
+.kilka_na_jedno <- function(wartosc,tabela_co, na_co){
   tabela_zmian <- numeric(7)
   names(tabela_zmian) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   cena <- wartosc[[na_co]]

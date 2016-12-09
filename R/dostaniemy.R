@@ -10,11 +10,10 @@
 #'stado_max <- c(60,24,20,12,6,4,2)
 #'names(stado_max) <- c("krolik","owca","swinia","krowa","kon","maly_pies","duzy_pies")
 #'dostaniemy(chcemy,stado,stado_max-stado)
-#'
-#'@export
 
 
-dostaniemy <- function(tyle_chce_wziac,stado,stado_glowne){
+
+.dostaniemy <- function(tyle_chce_wziac,stado,stado_glowne){
   tyle_chce_wziac <- ifelse(tyle_chce_wziac <= stado_glowne, tyle_chce_wziac, stado_glowne)
   return(tyle_chce_wziac)
 }

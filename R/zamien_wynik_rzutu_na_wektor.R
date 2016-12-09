@@ -4,11 +4,11 @@
 #'
 #'@examples
 #'zamien_wynik_rzutu_na_wektor(c("krolik","owca"))
-#'@export
 
 
 
-zamien_wynik_rzutu_na_wektor <- function(wynik){
+
+.zamien_wynik_rzutu_na_wektor <- function(wynik){
   c1 <- switch(wynik[1], # wynik z pierwszej kosci
                krolik=c(1,0,0,0,0,0,0),
                owca=c(0,1,0,0,0,0,0),

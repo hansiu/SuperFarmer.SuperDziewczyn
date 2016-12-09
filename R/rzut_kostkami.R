@@ -9,10 +9,9 @@
 #'kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
 #'kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
 #'rzut_kostkami(kostka_zielona,kostka_czerwona)
-#'
-#'@export
 
-rzut_kostkami <- function(a,b){
+
+.rzut_kostkami <- function(a,b){
   wynik <- c(sample(a, 1), sample(b, 1))
   return(wynik)
 }

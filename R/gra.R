@@ -17,9 +17,9 @@ gra <- function(strategia){
   names(warunek_wygranej) <- names(stado)
   kostka_zielona <- c("krolik","krolik","krolik","krolik","krolik","krolik","owca",   "owca" ,"owca","swinia","krowa","wilk")
   kostka_czerwona <- c("krolik","krolik","krolik","krolik","krolik","krolik","owca","owca","swinia","swinia","kon", "lis")
-  while(wygrana(warunek_wygranej,stado)!=TRUE){
+  while(.wygrana(warunek_wygranej,stado)!=TRUE){
     stado <- strategia(stado)
-    stado <- przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona)
+    stado <- .przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona)
     licznik <- licznik+1
   }
   return(licznik)

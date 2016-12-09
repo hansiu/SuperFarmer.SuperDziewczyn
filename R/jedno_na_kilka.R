@@ -1,21 +1,20 @@
-#'Zamiana jednego zwierzęcia na kilka
+#'Zamiana jednego zwierzecia na kilka
 #'
-#'Funkcja jedno_na_kilka() zwraca nam tabele zmian które można wykonać przy zaproponowanej wymianie
+#'Funkcja jedno_na_kilka() zwraca nam tabele zmian ktore mozna wykonac przy zaproponowanej wymianie
 #'
 #'@param stado stan stada gracza
 #'@param wartosc wartosc zwierzat w krolikach
-#'@param co nazwa zwierzęcia które chcemy oddać
-#'@param na_co nazwa zwierzęcia które chcemy otrzymać
-#'@return tabela zmian, które na daną chwilę można wykonać
+#'@param co nazwa zwierzecia ktore chcemy oddac
+#'@param na_co nazwa zwierzecia ktore chcemy otrzymac
+#'@return tabela zmian, ktore na dana chwile mozna wykonac
 #'
 #'@examples
 #'stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
 #'jedno_na_kilka(wartosc_w_krolikach, stado, "krowa","owca")
-#'
-#'@export
 
 
-jedno_na_kilka <- function(wartosc,stado,co,na_co){
+
+.jedno_na_kilka <- function(wartosc,stado,co,na_co){
   if(stado[[co]]==0){
     return(FALSE)
   }

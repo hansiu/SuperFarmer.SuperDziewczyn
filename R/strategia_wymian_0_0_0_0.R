@@ -20,24 +20,24 @@ strategia_wymian_0_0_0_0 <- function(stado){
 
   if(stado[["kon"]]>= 2){
     wymiana[1:7]<-c(6,1,2,1,-1,0,0)
-    stado <- dokonanie_wymian(stado,wymiana)
+    stado <- .dokonanie_wymian(stado,wymiana)
     return(stado)
   }
-  if((stado_w_krolikach(wartosc_w_krolikach,stado[c(1,2,3,4,6,7)])>=72)&&(stado[["kon"]]==1)){
-    wymiana <- kilka_na_jedno(wartosc_w_krolikach,stado,"kon")
-    stado <- dokonanie_wymian(stado,wymiana)
+  if((.stado_w_krolikach(wartosc_w_krolikach,stado[c(1,2,3,4,6,7)])>=72)&&(stado[["kon"]]==1)){
+    wymiana <- .kilka_na_jedno(wartosc_w_krolikach,stado,"kon")
+    stado <- .dokonanie_wymian(stado,wymiana)
     return(stado)
   }
   damy<-c( max(stado[["krolik"]]-kroliki,0),max(stado[["owca"]]-owce,0),stado["swinia"],stado["krowa"],0,max(stado[["maly_pies"]]-male_psy,0),max(stado[["duzy_pies"]]-duze_psy))
   names(damy) <-  c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   for(zw in c("kon","maly_pies","duzy_pies","owca")){
-    wymiana <-kilka_na_jedno(wartosc_w_krolikach,damy,zw)
+    wymiana <-.kilka_na_jedno(wartosc_w_krolikach,damy,zw)
     param = switch(zw,"kon" = 10,
                    "maly_pies" = male_psy,
                    "duzy_pies" = duze_psy,
                    "owca" = owce)
     if(class(wymiana)=="numeric" && stado[[zw]]< param){
-      stado <- dokonanie_wymian(stado,wymiana)
+      stado <- .dokonanie_wymian(stado,wymiana)
       return(stado)
     }
   }

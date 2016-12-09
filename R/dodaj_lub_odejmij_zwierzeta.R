@@ -14,9 +14,9 @@
 #'dodaj_lub_odejmij_zwierzeta(tabela,1,stado,stado_glowne)
 #'co <- c("krolik"=1,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
 #'dodaj_lub_odejmij_zwierzeta(co,-1,stado,stado_glowne)
-#'@export
 
-dodaj_lub_odejmij_zwierzeta <- function(co, jak=1,stado,stado_glowne){
+
+.dodaj_lub_odejmij_zwierzeta <- function(co, jak=1,stado,stado_glowne){
   stado <- stado + jak * co
   stado_glowne <- stado_glowne - jak * co
   return(stado)

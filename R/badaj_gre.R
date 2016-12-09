@@ -12,7 +12,7 @@
 #'
 #'@export
 
-badaj_gre <- function(strategia,powtorzenia=10000){
+badaj_gre <- function(strategia,powtorzenia=100){
   czasy <- c()
   for (i in 1:powtorzenia){
     czasy[i] <- gra(strategia)
