@@ -2,19 +2,19 @@
 % Please edit documentation in R/badaj_gre.R
 \name{badaj_gre}
 \alias{badaj_gre}
-\title{Funkcja powtarzajaca gre 10000 razy}
+\title{Funkcja powtarzajaca gre podana liczbę razy}
 \usage{
 badaj_gre(strategia, powtorzenia = 100)
 }
 \arguments{
 \item{strategia}{strategia ktora chcemy grac}
 
-\item{powtorzenia}{liczba powtorzen gier do stestowania, domyslnie 10000}
+\item{powtorzenia}{liczba powtorzen gier do stestowania, domyslnie 100}
 }
 \value{
-lista dwuelementowa zawierajaca podstawowe statystyki i wykres rozkladu czasow gry przy zadanej liczbie powtorzen
+wektor zawierajacy dane dotyczace dlugosci trwania wybranej liczby gier
 }
 \description{
-Funkcja powtarzajaca gre 10000 razy
+Funkcja powtarzajaca gre podana liczbę razy
 }
 

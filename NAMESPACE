@@ -2,9 +2,11 @@
 
 export(badaj_gre)
 export(gra)
-export(strategia_nowa)
+export(statystyki_gry)
+export(strategia_owce)
 export(strategia_wymian_0_0_0_0)
 export(strategia_wymian_1_1_1_1)
+export(wizualizacja_gry)
 importFrom(ggplot2,aes)
 importFrom(ggplot2,geom_histogram)
 importFrom(ggplot2,ggplot)

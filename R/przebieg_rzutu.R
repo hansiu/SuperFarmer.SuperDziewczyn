@@ -32,8 +32,9 @@
 
   otrzymane <- numeric(7)
   names(otrzymane) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
+  indeksy <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   #cos tu jest nie tak ale na razie nie moge okreslic co
-  for(i in names(otrzymane)){
+  for(i in indeksy){
     if (wylosowane[[i]] == 0){
       otrzymane[[i]] <- 0
     } else{

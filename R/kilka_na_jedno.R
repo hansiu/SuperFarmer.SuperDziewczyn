@@ -1,6 +1,6 @@
 #'Funkcja wymian kilku zwierzat na jedno
 #'
-#'Funkcja kilka_na_jedno() otrzymuje nazwany wektor zawierajacy liczbe zwierzat które chcemy wymienić oraz nazwe zwierzecia ktore chcemy otrzymac
+#'Funkcja kilka_na_jedno() otrzymuje nazwany wektor zawierajacy liczbe zwierzat ktore chcemy wymienic oraz nazwe zwierzecia ktore chcemy otrzymac
 #'
 #'@param wartosc wartosc zwierzat wyrazona w krolikach
 #'@param tabela_co tabela ze zwierzetami ktore chcemy oddac
@@ -17,7 +17,7 @@
   tabela_zmian <- numeric(7)
   names(tabela_zmian) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
   cena <- wartosc[[na_co]]
-  kolejnosc <- c("krowa","swinia","owca","krolik","maly_pies","duzy_pies")
+  kolejnosc <- c("krowa","swinia","owca","krolik","maly_pies","duzy_pies","kon")
 
   for (i in kolejnosc){
     if(tabela_co[[i]]>0 && wartosc[[i]]<=cena && cena >0){
@@ -26,5 +26,7 @@
     }
   }
   tabela_zmian[[na_co]] <- 1
-  ifelse(cena>0, return(FALSE), return(tabela_zmian))
+  tabela_zmian2 <- as.numeric(tabela_zmian)
+
+  ifelse(sum(tabela_zmian2==0)==6 || cena >0 , return(FALSE), return(tabela_zmian))
 }
