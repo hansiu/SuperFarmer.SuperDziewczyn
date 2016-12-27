@@ -15,23 +15,25 @@
 
 
 
-.atak_drapieznika <- function(czy_lis = FALSE, czy_wilk = FALSE,stado,stado_max){
+.atak_drapieznika <- function(czy_lis = FALSE, czy_wilk = FALSE,stado,stado_max,co_zostawia_lis,co_zostawia_wilk){
+  zeros <- numeric(7)
+  names(zeros) <- names(stado)
   if (czy_wilk == TRUE ){
     if (stado[['duzy_pies']]>0){
       #ucieka duzy pies
       stado <- .dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,0,1),-1,stado,stado_max-stado)
     } else {
       # wszystko oprocz koni i psow ucieka
-      stado <- .dodaj_lub_odejmij_zwierzeta(c(stado[1:4],0,0,0),-1,stado,stado_max-stado)
+      stado <- .dodaj_lub_odejmij_zwierzeta(pmax(stado-co_zostawia_wilk,zeros),-1,stado,stado_max-stado)
     }
   }
-  if (czy_lis == TRUE ){
+  if (czy_lis == TRUE && czy_wilk==FALSE ){
     if (stado[['maly_pies']]>0){
       #ucieka maly pies
       stado <- .dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,1,0),-1,stado,stado_max-stado)
     } else {
       # wszystkie kroliki uciekaja
-      stado <- .dodaj_lub_odejmij_zwierzeta(c(stado[['krolik']],0,0,0,0,0,0),-1,stado,stado_max-stado)
+      stado <- .dodaj_lub_odejmij_zwierzeta(pmax(stado-co_zostawia_lis,zeros),-1,stado,stado_max-stado)
     }
   }
   return(stado)

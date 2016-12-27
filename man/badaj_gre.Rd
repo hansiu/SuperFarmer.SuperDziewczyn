@@ -4,7 +4,11 @@
 \alias{badaj_gre}
 \title{Funkcja powtarzajaca gre podana liczbę razy}
 \usage{
-badaj_gre(strategia, powtorzenia = 100)
+badaj_gre(strategia, powtorzenia = 100,
+  stado_max = SuperFarmer.SuperDziewczyn::stado_max,
+  kostka_zielona = SuperFarmer.SuperDziewczyn::kostka_zielona,
+  kostka_czerwona = SuperFarmer.SuperDziewczyn::kostka_czerwona,
+  warunek_wygranej = SuperFarmer.SuperDziewczyn::warunek_wygranej)
 }
 \arguments{
 \item{strategia}{strategia ktora chcemy grac}

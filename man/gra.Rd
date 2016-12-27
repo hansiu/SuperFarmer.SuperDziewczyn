@@ -4,7 +4,12 @@
 \alias{gra}
 \title{Funkcja opisująca przebieg gry}
 \usage{
-gra(strategia)
+gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
+  kostka_zielona = SuperFarmer.SuperDziewczyn::kostka_zielona,
+  kostka_czerwona = SuperFarmer.SuperDziewczyn::kostka_czerwona,
+  warunek_wygranej = SuperFarmer.SuperDziewczyn::warunek_wygranej,
+  co_zostawia_lis = SuperFarmer.SuperDziewczyn::co_zostawia_lis,
+  co_zostawia_wilk = SuperFarmer.SuperDziewczyn::co_zostawia_wilk)
 }
 \arguments{
 \item{strategia}{nazwa funkcji opisującej strategię gracza}

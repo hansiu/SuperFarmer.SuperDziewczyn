@@ -6,7 +6,7 @@
 #'@return wektor zawierajacy dane dotyczace dlugosci trwania wybranej liczby gier
 #'@export
 
-badaj_gre <- function(strategia,powtorzenia=100){
+badaj_gre <- function(strategia,powtorzenia=100,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej){
   czasy <- c()
   for (i in 1:powtorzenia){
     czasy[i] <- gra(strategia)
