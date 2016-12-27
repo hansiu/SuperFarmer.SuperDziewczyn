@@ -13,6 +13,21 @@ gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
 }
 \arguments{
 \item{strategia}{nazwa funkcji opisującej strategię gracza}
+
+\item{stado_max}{maksymalny stan stada glownego}
+
+\item{kostka_zielona}{zwierzeta na kostce zielonej}
+
+\item{kostka_czerwona}{zwierzeta na kostce czerwonej}
+
+\item{warunek_wygranej}{warunki konieczne do zakonczenia gry}
+
+\item{co_zostawia_lis}{wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku lisa}
+
+\item{co_zostawia_wilk}{wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku wilka}
+}
+\value{
+liczba oznaczajaca dlugosc trwania gry
 }
 \description{
 Funkcja opisująca przebieg gry

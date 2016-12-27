@@ -4,6 +4,8 @@
 #'@param czy_wilk wartosc logiczna: TRUE - pojawil sie wilk, FALSE - nie pojawil sie
 #'@param stado stan stada gracza
 #'@param stado_max maksymalny stan stada gracza
+#'@param co_zostawia_lis wektor zwierzat ktore zostawia lis
+#'@param co_zostawia_wilk wektor zwierzat ktore zostawia wilk
 #'
 #'@examples
 #'stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)

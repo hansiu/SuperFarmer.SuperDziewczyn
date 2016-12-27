@@ -8,12 +8,26 @@ badaj_gre(strategia, powtorzenia = 100,
   stado_max = SuperFarmer.SuperDziewczyn::stado_max,
   kostka_zielona = SuperFarmer.SuperDziewczyn::kostka_zielona,
   kostka_czerwona = SuperFarmer.SuperDziewczyn::kostka_czerwona,
-  warunek_wygranej = SuperFarmer.SuperDziewczyn::warunek_wygranej)
+  warunek_wygranej = SuperFarmer.SuperDziewczyn::warunek_wygranej,
+  co_zostawia_lis = SuperFarmer.SuperDziewczyn::co_zostawia_lis,
+  co_zostawia_wilk = SuperFarmer.SuperDziewczyn::co_zostawia_wilk)
 }
 \arguments{
 \item{strategia}{strategia ktora chcemy grac}
 
 \item{powtorzenia}{liczba powtorzen gier do stestowania, domyslnie 100}
+
+\item{stado_max}{maksymalny stan stada glownego}
+
+\item{kostka_zielona}{zwierzeta na kostce zielonej}
+
+\item{kostka_czerwona}{zwierzeta na kostce czerwonej}
+
+\item{warunek_wygranej}{warunki konieczne do zakonczenia gry}
+
+\item{co_zostawia_lis}{wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku lisa}
+
+\item{co_zostawia_wilk}{wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku wilka}
 }
 \value{
 wektor zawierajacy dane dotyczace dlugosci trwania wybranej liczby gier

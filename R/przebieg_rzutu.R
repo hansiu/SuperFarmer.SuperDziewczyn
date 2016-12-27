@@ -4,6 +4,8 @@
 #'@param stado_max maksymalna wartosc stada glownego
 #'@param kostka_zielona zwierzeta na kostce zielonej
 #'@param  kostka_czerwona zwierzeta na kostce czerwonej
+#'@param co_zostawia_lis wektor zwierzat ktore zostawia lis
+#'@param co_zostawia_wilk wektor zwierzat ktore zostawia wilk
 #'
 #'@return stado
 #'
@@ -19,12 +21,12 @@
 
 
 
-.przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona){
+.przebieg_rzutu <- function(stado,stado_max,kostka_zielona,kostka_czerwona,co_zostawia_lis,co_zostawia_wilk){
   kostki<-.rzut_kostkami(kostka_zielona,kostka_czerwona)
   czy_wilk <- 'wilk' %in% kostki
   czy_lis <- 'lis' %in% kostki
   if (czy_wilk | czy_lis){
-    stado <- .atak_drapieznika(czy_lis,czy_wilk,stado,stado_max)
+    stado <- .atak_drapieznika(czy_lis,czy_wilk,stado,stado_max,co_zostawia_lis,co_zostawia_wilk)
   }
 
   wylosowane <- .zamien_wynik_rzutu_na_wektor(kostki)
