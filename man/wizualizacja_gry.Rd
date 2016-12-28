@@ -4,10 +4,12 @@
 \alias{wizualizacja_gry}
 \title{Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier}
 \usage{
-wizualizacja_gry(wektor)
+wizualizacja_gry(wektor, typ_wykresu1 = "histogram", typ_wykresu2 = NULL)
 }
 \arguments{
 \item{wektor}{wektor zawierajacy dane dotyczace dlugosci trwania poszczegolnych gier}
+
+\item{typ_wykresu}{wykres jaki chcemy uzyskac}
 }
 \description{
 Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier
