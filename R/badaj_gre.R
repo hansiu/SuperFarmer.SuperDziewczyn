@@ -8,14 +8,15 @@
 #'@param warunek_wygranej warunki konieczne do zakonczenia gry
 #'@param co_zostawia_lis wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku lisa
 #'@param co_zostawia_wilk wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku wilka
+#'@param wartosc_w_krolikach wektor zawierajacy wartosci w krolikach poszczegolnych zwierzat
 #'
 #'@return wektor zawierajacy dane dotyczace dlugosci trwania wybranej liczby gier
 #'@export
 
-badaj_gre <- function(strategia,powtorzenia=100,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk){
+badaj_gre <- function(strategia,powtorzenia=100,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk,wartosc_w_krolikach=SuperFarmer.SuperDziewczyn::wartosc_w_krolikach){
   czasy <- c()
   for (i in 1:powtorzenia){
-    czasy[i] <- gra(strategia)
+    czasy[i] <- gra(strategia,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk,wartosc_w_krolikach=SuperFarmer.SuperDziewczyn::wartosc_w_krolikach)
   }
 
   return(czasy)

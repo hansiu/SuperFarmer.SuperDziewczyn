@@ -1,6 +1,7 @@
 #'Strategia wymian z zalozeniem ze zbieramy owce
 #'
 #'@param stado stado gracza
+#'
 #'@return wymiany ze strategii
 #'
 #'@export

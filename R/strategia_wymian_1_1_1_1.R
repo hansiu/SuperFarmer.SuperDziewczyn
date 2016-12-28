@@ -1,6 +1,8 @@
 #'Strategia wymian z zalozeniem ze zawsze chcemy miec jednego krolika, jedna owce, jednego malego psa i jednego duzego psa
 #'
 #'@param stado stado gracza
+#'
+#'
 #'@return wymiany ze strategii
 #'
 #'@export

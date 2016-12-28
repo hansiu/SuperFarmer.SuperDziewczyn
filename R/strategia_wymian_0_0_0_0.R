@@ -1,6 +1,8 @@
 #'Strategia wymian z zalozeniem ze gramy va banque
 #'
 #'@param stado stado gracza
+#'
+#'
 #'@return wymiany ze strategii
 #'
 #'@export

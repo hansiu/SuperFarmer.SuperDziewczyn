@@ -7,19 +7,24 @@
 #'@param warunek_wygranej warunki konieczne do zakonczenia gry
 #'@param co_zostawia_lis wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku lisa
 #'@param co_zostawia_wilk wektor zawierajacy liczbe zwierzat ktora maksymalnie zostaje w stadzie po ataku wilka
+#'@param wartosc_w_krolikach wektor zawierajacy wartosci w krolikach poszczegolnych zwierzat
 #'
 #'@return liczba oznaczajaca dlugosc trwania gry
 #'
 #'@export
 
-gra <- function(strategia,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk){
+gra <- function(strategia,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk,wartosc_w_krolikach=SuperFarmer.SuperDziewczyn::wartosc_w_krolikach){
   stado <- numeric(7)
   names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
+  if (is.null(names(wartosc_w_krolikach))){
+    names(wartosc_w_krolikach) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
+  }
   licznik <- 0
+  if(!is.null(strategia)){
   while(.wygrana(warunek_wygranej,stado)!=TRUE){
-    stado <- strategia(stado)
+    stado <- tryCatch(strategia(stado,wartosc_w_krolikach=wartosc_w_krolikach),error = function(e) strategia(stado), finally= {})
     stado <- .przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona,co_zostawia_lis,co_zostawia_wilk)
     licznik <- licznik+1
-  }
+  }}
   return(licznik)
 }
