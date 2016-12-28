@@ -1,7 +1,8 @@
 #'Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier
 #'
 #'@param wektor wektor zawierajacy dane dotyczace dlugosci trwania poszczegolnych gier
-#'@param typ_wykresu wykres jaki chcemy uzyskac
+#'@param typ_wykresu1 wykres jaki chcemy uzyskac
+#'@param typ_wykresu2 opcjonalnie druga warstwa na wykresie
 #'
 #'
 #'@importFrom ggplot2 ggplot
@@ -22,15 +23,7 @@
 wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NULL){
   czasy <- as.data.frame(wektor)
   colnames(czasy) <- "Czas_gry"
-  if(typ_wykresu1 == "gestosc"&&is.null(typ_wykresu2)==TRUE){
-    ggplot(data=czasy, aes(czasy$Czas_gry, ..count..))+
-      geom_density(position="stack") +
-      labs(title="Rozklad czasu gry") +
-      labs(x="Czas gry", y="Liczba gier")+
-      theme(axis.title.y=element_text(angle=0))
-  }
-  else{
-    if(typ_wykresu1 == "histogram"&& is.null(typ_wykresu2)==TRUE){
+  if(typ_wykresu1 == "histogram"&& is.null(typ_wykresu2)==TRUE){
       ggplot(data=czasy, aes(czasy$Czas_gry))+
         geom_histogram(binwidth=1,col="blue", fill="green") +
         labs(title="Rozklad czasu gry") +
@@ -71,4 +64,3 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
       }
     }
   }
-}
