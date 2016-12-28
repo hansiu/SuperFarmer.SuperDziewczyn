@@ -2,7 +2,7 @@
 % Please edit documentation in R/gra.R
 \name{gra}
 \alias{gra}
-\title{Funkcja opisująca przebieg gry}
+\title{Funkcja opisujaca przebieg gry}
 \usage{
 gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
   kostka_zielona = SuperFarmer.SuperDziewczyn::kostka_zielona,
@@ -13,7 +13,7 @@ gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
   wartosc_w_krolikach = SuperFarmer.SuperDziewczyn::wartosc_w_krolikach)
 }
 \arguments{
-\item{strategia}{nazwa funkcji opisującej strategię gracza}
+\item{strategia}{nazwa funkcji opisujacej strategię gracza}
 
 \item{stado_max}{maksymalny stan stada glownego}
 
@@ -33,6 +33,6 @@ gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
 liczba oznaczajaca dlugosc trwania gry
 }
 \description{
-Funkcja opisująca przebieg gry
+Funkcja opisujaca przebieg gry
 }
 

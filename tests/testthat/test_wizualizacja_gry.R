@@ -1,4 +1,4 @@
-test_that("Wizualizacja gry przyjmuje wektor czasow trwania poszczegolnych gier oraz typy wykresów",{
+test_that("Wizualizacja gry przyjmuje wektor czasow trwania poszczegolnych gier oraz typy wykresow",{
           wektor <- c(20,30,30,20,30,20,10,12)
           expect_error(wizualizacja_gry())
           expect_length(wizualizacja_gry(wektor),9)

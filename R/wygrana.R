@@ -1,4 +1,4 @@
-#'Funkcja sprawdzajaca czy spelnione są warunki wygranej
+#'Funkcja sprawdzajaca czy spelnione sa warunki wygranej
 #'
 #'Funkcja wygrana() przyjmuje wektor warunki wygranej oraz tabele zawierajaca stan stada gracza
 #'

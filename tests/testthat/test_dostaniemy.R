@@ -1,4 +1,4 @@
-test_that("Dostaniemy przyjmuje 3 argumenty i zwraca wektor numeryczny o długości 7",{
+test_that("Dostaniemy przyjmuje 3 argumenty i zwraca wektor numeryczny o długosci 7",{
   expect_error(.dostaniemy())
   expect_error(.dostaniemy(c(1,0,0,0,0,0,0)))
   expect_error(.dostaniemy(c(1,0,0,0,0,0,0),c(0,0,0,0,0,0,0)))

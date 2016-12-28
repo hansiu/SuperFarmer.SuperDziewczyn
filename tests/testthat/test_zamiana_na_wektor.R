@@ -9,7 +9,7 @@ test_that("Zamiana wektora napisowego rzutu daje wektor liczbowy",{
   expect_length(.zamien_wynik_rzutu_na_wektor(c('krolik','wilk')),7)
 })
 
-test_that("Wyniki zamiany są poprawne",{
+test_that("Wyniki zamiany sa poprawne",{
   expect_equal(.zamien_wynik_rzutu_na_wektor(c('krolik','wilk')),c(1,0,0,0,0,0,0))
   expect_equal(.zamien_wynik_rzutu_na_wektor(c('owca','owca')),c(0,2,0,0,0,0,0))
   expect_equal(.zamien_wynik_rzutu_na_wektor(c('swinia','kon')),c(0,0,1,0,1,0,0))
