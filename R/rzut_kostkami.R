@@ -1,6 +1,6 @@
 #'Wynik rzutu dwoma kostkami
 #'
-#'Funkcja rzut_kostkami() wyznacza parę wartosci - nazwy zwierzat na obu kostkach.
+#'Funkcja rzut_kostkami() wyznacza pare wartosci - nazwy zwierzat na obu kostkach.
 #'
 #'@param a wektor zawierajacy zwierzeta na kostce zielonej
 #'@param b wektor zawierajacy zwierzeta na kostce czerwonej

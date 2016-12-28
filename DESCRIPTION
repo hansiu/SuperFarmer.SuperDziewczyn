@@ -2,7 +2,7 @@ Package: SuperFarmer.SuperDziewczyn
 Title: SuperFarmer
 Version: 0.0.0.9006
 Authors@R: c(person("Aleksandra", "Dabrowska", email = "ad345131@students.mimuw.edu.pl", role = "cre"),person("Hanna","Kranas", email = "hk335070@students.mimuw.edu.pl", role = "aut"))
-Description: Pakiet zawiera funkcje potrzebne do symulacji gry w SuperFarmera. Wynikiem wywo³ania g³ównej funkcji badaj_gre s¹ statystyki zwi¹zane z rozk³adem czasu trwania gier przy 10000 powtórzeniach oraz wizualizacje czasow trwania gier przy ustalonej strategii.
+Description: Pakiet zawiera funkcje potrzebne do symulacji gry w SuperFarmera. Wynikiem wywolania glownej funkcji badaj_gre sa statystyki zwiazane z rozkladem czasu trwania gier przy 10000 powtorzeniach oraz wizualizacje czasow trwania gier przy ustalonej strategii.
 Depends: R (>= 3.0.0)
 License: GPL
 Encoding: UTF-8
@@ -16,4 +16,6 @@ Author: Aleksandra Dabrowska [cre],
   Hanna Kranas [aut]
 Maintainer: Aleksandra Dabrowska <ad345131@students.mimuw.edu.pl>
 Suggests: testthat,
-    knitr
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

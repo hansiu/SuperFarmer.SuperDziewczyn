@@ -1,6 +1,6 @@
 #'Funkcja opisujaca przebieg gry
 #'
-#'@param strategia nazwa funkcji opisujacej strategię gracza
+#'@param strategia nazwa funkcji opisujacej strategie gracza
 #'@param stado_max maksymalny stan stada glownego
 #'@param kostka_zielona zwierzeta na kostce zielonej
 #'@param kostka_czerwona zwierzeta na kostce czerwonej

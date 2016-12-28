@@ -13,7 +13,7 @@ gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
   wartosc_w_krolikach = SuperFarmer.SuperDziewczyn::wartosc_w_krolikach)
 }
 \arguments{
-\item{strategia}{nazwa funkcji opisujacej strategię gracza}
+\item{strategia}{nazwa funkcji opisujacej strategie gracza}
 
 \item{stado_max}{maksymalny stan stada glownego}
 

@@ -1,4 +1,4 @@
-test_that("Rzut kostkami przyjmuje dwa argumenty(kostki) i zwraca wektor napisow o długosci 2",{
+test_that("Rzut kostkami przyjmuje dwa argumenty(kostki) i zwraca wektor napisow o dlugosci 2",{
   kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","swinia","swinia","kon","lis")
   kostka_zielona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca","owca","swinia","krowa","wilk")
   expect_error(.rzut_kostkami())
