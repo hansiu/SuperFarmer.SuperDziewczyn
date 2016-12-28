@@ -1,10 +1,16 @@
 test_that("Wizualizacja gry przyjmuje wektor czasow trwania poszczegolnych gier oraz typy wykresów",{
           wektor <- c(20,30,30,20,30,20,10,12)
           expect_error(wizualizacja_gry())
+          expect_length(wizualizacja_gry(wektor),9)
+          expect_length(wizualizacja_gry(badaj_gre(strategia_owce,powtorzenia=10)),9)
           expect_length(wizualizacja_gry(wektor,typ_wykresu1="histogram"),9)
+          expect_length(wizualizacja_gry(wektor,typ_wykresu1="boxplot"),9)
+          expect_length(wizualizacja_gry(wektor,typ_wykresu1="skrzypce"),9)
+          expect_length(wizualizacja_gry(wektor,typ_wykresu1="skrzypce",typ_wykresu2="boxplot"),9)
           })
 
 test_that("Wizualizacja gry zwraca poprawne wartosci",{
   wektor <- c(20,30,30,20,30,20,10,12)
   expect_is(wizualizacja_gry(wektor,typ_wykresu1 ="histogram"),c("gg","ggplot"))
+  expect_is(wizualizacja_gry(badaj_gre(strategia_owce,powtorzenia = 10),typ_wykresu1 ="skrzypce"),c("gg","ggplot"))
 })

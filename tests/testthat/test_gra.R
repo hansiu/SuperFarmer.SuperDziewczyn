@@ -6,4 +6,7 @@ test_that("Gra przyjmuje nazwe funkcji strategii i zwraca liczbe",{
   expect_length(gra(strategia_wymian_1_1_1_1),1)
   expect_is(gra(strategia_wymian_1_1_1_1),"numeric")
   expect_named(gra(strategia_wymian_1_1_1_1),NULL)
+  expect_length(gra(strategia_owce),1)
+  expect_is(gra(strategia_owce),"numeric")
+  expect_named(gra(strategia_owce),NULL)
 })
