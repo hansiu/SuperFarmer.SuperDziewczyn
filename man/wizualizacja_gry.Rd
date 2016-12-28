@@ -9,7 +9,9 @@ wizualizacja_gry(wektor, typ_wykresu1 = "histogram", typ_wykresu2 = NULL)
 \arguments{
 \item{wektor}{wektor zawierajacy dane dotyczace dlugosci trwania poszczegolnych gier}
 
-\item{typ_wykresu}{wykres jaki chcemy uzyskac}
+\item{typ_wykresu1}{wykres jaki chcemy uzyskac}
+
+\item{typ_wykresu2}{opcjonalnie druga warstwa na wykresie}
 }
 \description{
 Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier
