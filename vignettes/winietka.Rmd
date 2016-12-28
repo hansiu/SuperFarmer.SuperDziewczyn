@@ -1,6 +1,6 @@
 ---
 title: "Pakiet SuperFarmer.SuperDziewczyn"
-author: "A. Dabrowska, H. Kranas"
+author: "A. Dąbrowska, H. Kranas"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >

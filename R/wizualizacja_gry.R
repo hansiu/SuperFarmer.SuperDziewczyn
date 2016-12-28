@@ -27,14 +27,12 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
       ggplot(data=czasy, aes(czasy$Czas_gry))+
         geom_histogram(binwidth=1,col="blue", fill="green") +
         labs(title="Rozklad czasu gry") +
-        labs(x="Czas gry", y="Liczba gier")+
-        theme(axis.title.y=element_text(angle=0))
+        labs(x="Czas gry", y="Liczba gier")
     }else{
       if(typ_wykresu1 == "boxplot" && is.null(typ_wykresu2)==TRUE){
         ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
           geom_boxplot(fill="green")+
-          theme(axis.ticks.x=element_blank(),
-                axis.title.y=element_text(angle=0))+
+          theme(axis.ticks.x=element_blank())+
           ylab("Czas trwania gier") +
           xlab("Badaj gre")+
           labs(title="Rozklad czasu gry")
@@ -42,8 +40,7 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
         if(typ_wykresu1 == "skrzypce" && is.null(typ_wykresu2)==TRUE){
           ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
             geom_violin(fill="blue")+
-            theme(axis.ticks.x=element_blank(),
-                  axis.title.y=element_text(angle=0))+
+            theme(axis.ticks.x=element_blank())+
             ylab("Czas trwania gier") +
             xlab("Badaj gre")+
             labs(title="Rozklad czasu gry")
@@ -52,8 +49,7 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
             ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
             geom_violin(fill="#33FFFF")+
             geom_boxplot(fill="#99CCFF")+
-            theme(axis.ticks.x=element_blank(),
-                  axis.title.y=element_text(angle=0))+
+            theme(axis.ticks.x=element_blank())+
             ylab("Czas trwania gier") +
             xlab("Badaj gre")+
             labs(title="Rozklad czasu gry")
