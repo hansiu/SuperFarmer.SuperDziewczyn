@@ -1,4 +1,4 @@
-#'Funkcja powtarzajaca gre podana liczbę razy
+#'Funkcja powtarzajaca gre podana liczbe razy
 #'
 #'@param strategia strategia ktora chcemy grac
 #'@param powtorzenia liczba powtorzen gier do stestowania, domyslnie 100

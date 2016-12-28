@@ -2,7 +2,7 @@
 % Please edit documentation in R/badaj_gre.R
 \name{badaj_gre}
 \alias{badaj_gre}
-\title{Funkcja powtarzajaca gre podana liczbę razy}
+\title{Funkcja powtarzajaca gre podana liczbe razy}
 \usage{
 badaj_gre(strategia, powtorzenia = 100,
   stado_max = SuperFarmer.SuperDziewczyn::stado_max,
@@ -36,6 +36,6 @@ badaj_gre(strategia, powtorzenia = 100,
 wektor zawierajacy dane dotyczace dlugosci trwania wybranej liczby gier
 }
 \description{
-Funkcja powtarzajaca gre podana liczbę razy
+Funkcja powtarzajaca gre podana liczbe razy
 }
 

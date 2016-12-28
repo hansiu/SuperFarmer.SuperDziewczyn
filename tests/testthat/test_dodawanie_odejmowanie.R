@@ -1,4 +1,4 @@
-test_that("Dodawanie zwierząt przyjmuje przynajmniej 3 argumenty i zwraca nazwany wektor numeryczny o długości 7",{
+test_that("Dodawanie zwierząt przyjmuje przynajmniej 3 argumenty i zwraca nazwany wektor numeryczny o dlugości 7",{
   expect_error(.dodaj_lub_odejmij_zwierzeta())
   expect_error(.dodaj_lub_odejmij_zwierzeta(c(1,24,0,0,0,4,0)))
   expect_error(.dodaj_lub_odejmij_zwierzeta(c(1,24,0,0,0,4,0),-1))
