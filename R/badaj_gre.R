@@ -16,7 +16,7 @@
 badaj_gre <- function(strategia,powtorzenia=100,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk,wartosc_w_krolikach=SuperFarmer.SuperDziewczyn::wartosc_w_krolikach){
   czasy <- c()
   for (i in 1:powtorzenia){
-    czasy[i] <- gra(strategia,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka_zielona=SuperFarmer.SuperDziewczyn::kostka_zielona,kostka_czerwona=SuperFarmer.SuperDziewczyn::kostka_czerwona,warunek_wygranej=SuperFarmer.SuperDziewczyn::warunek_wygranej,co_zostawia_lis=SuperFarmer.SuperDziewczyn::co_zostawia_lis,co_zostawia_wilk=SuperFarmer.SuperDziewczyn::co_zostawia_wilk,wartosc_w_krolikach=SuperFarmer.SuperDziewczyn::wartosc_w_krolikach)
+    czasy[i] <- gra(strategia,stado_max,kostka_zielona,kostka_czerwona,warunek_wygranej,co_zostawia_lis,co_zostawia_wilk,wartosc_w_krolikach)
   }
 
   return(czasy)
