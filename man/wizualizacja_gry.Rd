@@ -2,7 +2,7 @@
 % Please edit documentation in R/wizualizacja_gry.R
 \name{wizualizacja_gry}
 \alias{wizualizacja_gry}
-\title{Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier}
+\title{Wizualizacja n gier}
 \usage{
 wizualizacja_gry(wektor, typ_wykresu1 = "histogram", typ_wykresu2 = NULL)
 }
@@ -13,7 +13,10 @@ wizualizacja_gry(wektor, typ_wykresu1 = "histogram", typ_wykresu2 = NULL)
 
 \item{typ_wykresu2}{opcjonalnie druga warstwa na wykresie}
 }
+\value{
+wykres
+}
 \description{
-Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier
+Funkcja `wizualizacja_gry()` jako argumenty pobiera wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier oraz typy wykresow ktore chcemy uzyskac (mozemy wybierac sposrod : histogram,boxplot,skrzypce,boxplot + skrzypce, skrzypce + boxplot).
 }
 

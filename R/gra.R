@@ -1,5 +1,7 @@
 #'Funkcja opisujaca przebieg gry
 #'
+#'Funkcja `gra()` symuluje pojedyncza rozgrywke w SuperFarmera zadana na poczatku strategia. Opcjonalnie mozna zmieniac parametry, np. zwierzeta na kostkach, warunek wygranej. Funkcja zwraca liczbe oznaczajaca dlugosc trwania tejze gry.
+#'
 #'@param strategia nazwa funkcji opisujacej strategie gracza
 #'@param stado_max maksymalny stan stada glownego
 #'@param kostka_zielona zwierzeta na kostce zielonej

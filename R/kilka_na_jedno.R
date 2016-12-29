@@ -1,10 +1,14 @@
 #'Funkcja wymian kilku zwierzat na jedno
 #'
-#'Funkcja kilka_na_jedno() otrzymuje nazwany wektor zawierajacy liczbe zwierzat ktore chcemy wymienic oraz nazwe zwierzecia ktore chcemy otrzymac
+#'Funkcja `kilka_na_jedno()` otrzymuje nazwany wektor zawierajacy liczbe zwierzat ktore chcemy wymienic oraz nazwe zwierzecia ktore chcemy otrzymac. Dokonuje ona wymiany kilku (mniej warosciowych) zwierzat na jedno. Zwraca tabele zmian mozliwa do wykoniania.
 #'
 #'@param wartosc wartosc zwierzat wyrazona w krolikach
 #'@param tabela_co tabela ze zwierzetami ktore chcemy oddac
 #'@param na_co nazwa zwierzecia ktore chcemy dostac
+#'
+#'@return tabela zmian, ktore na dana chwile mozna wykonac
+#'
+#'@seealso `jedno_na_kilka`
 #'
 #'@examples
 #'tabela_co <-c("krolik"=2,"owca"=1,"swinia"=1,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)

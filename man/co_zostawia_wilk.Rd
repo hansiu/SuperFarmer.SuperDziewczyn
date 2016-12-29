@@ -3,9 +3,9 @@
 \docType{data}
 \name{co_zostawia_wilk}
 \alias{co_zostawia_wilk}
-\title{Co po ataku zostawia wilk}
-\format{wektor 7 elementowy}
+\title{Co po ataku maksymalnie zostawia wilk w stadzie gracza}
+\format{nazwany wektor 7 elementowy}
 \description{
-Co po ataku zostawia wilk
+Co po ataku maksymalnie zostawia wilk w stadzie gracza
 }
 

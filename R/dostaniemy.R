@@ -1,8 +1,12 @@
 #'Funkcja wyznaczajaca ile zwierzat mozemy otrzymac ze stada
 #'
+#'Funkcja `dostaniemy()` przyjmuje 3 argumenty. W zaleznosci od argumentu tyle_chce_wziac sprawdza czy możliwe jest uzyskanie ze stada glownego podanej liczby zwierzat.
+#'
 #'@param tyle_chce_wziac Te zwierzeta chcemy otrzymac
 #'@param stado Stan stada gracza
 #'@param stado_glowne Stan stada glownego
+#'
+#'@return tyle_chce_wziac tabela zawierajaca liczby zwierzat mozliwe do uzyskania ze stada glownego
 #'
 #'@examples
 #'chcemy <- c(1,1,1,0,0,0,0)

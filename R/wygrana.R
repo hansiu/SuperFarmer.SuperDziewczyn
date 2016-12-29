@@ -1,9 +1,11 @@
 #'Funkcja sprawdzajaca czy spelnione sa warunki wygranej
 #'
-#'Funkcja wygrana() przyjmuje wektor warunki wygranej oraz tabele zawierajaca stan stada gracza
+#'Funkcja `wygrana()` przyjmuje wektor warunki wygranej oraz tabele zawierajaca stan stada gracza. Sprawdza ona czy nasza tabela zawiera wiecej lub tyle samo zwierzat danego rodzaju co warunek wygranej. Zwraca TRUE lub FALSE.
 #'
 #'@param warunek_wygranej wektor z warunkami zakonczenia gry
 #'@param table stan stada gracza
+#'
+#'@return wartosc logiczna TRUE lub FALSE w zaleznosci od tego czy nasze stado spelnia warunki wygranej czy nie
 #'
 #'@examples
 #'warunki_wygranej <- c("krolik"=1,"owca"=1,"swinia"=1,"krowa"=1,"kon"=1,"maly_pies"=0,"duzy_pies"=0)

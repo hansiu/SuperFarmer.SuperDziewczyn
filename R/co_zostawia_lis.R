@@ -1,6 +1,6 @@
-#'Co po ataku zostawia lis
+#'Co po ataku maksymalnie zostawia lis w stadzie gracza
 #'
 #'@docType data
 #'@name co_zostawia_lis
-#'@format wektor 7 elementowy
+#'@format nazwany wektor 7 elementowy
 NULL

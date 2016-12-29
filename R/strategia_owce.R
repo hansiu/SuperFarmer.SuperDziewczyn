@@ -1,8 +1,12 @@
 #'Strategia wymian z zalozeniem ze zbieramy owce
 #'
+#'Funkcja `strategia_owce()` otrzymuje jako argument stan stada gracza. Zaklada ona ze jesli nie jest mozliwa wymiana na konia to zbieramy owce. Po zdobyciu dwoch koni, wymieniamy jednego na zwierzeta pozostalych gatunkow.
+#'
 #'@param stado stado gracza
 #'
 #'@return wymiany ze strategii
+#'
+#'@seealso `strategia_wymian_0_0_0_0` i `strategia_wymian_1_1_1_1`
 #'
 #'@export
 

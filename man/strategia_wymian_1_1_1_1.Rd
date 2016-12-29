@@ -2,7 +2,7 @@
 % Please edit documentation in R/strategia_wymian_1_1_1_1.R
 \name{strategia_wymian_1_1_1_1}
 \alias{strategia_wymian_1_1_1_1}
-\title{Strategia wymian z zalozeniem ze zawsze chcemy miec jednego krolika, jedna owce, jednego malego psa i jednego duzego psa}
+\title{Strategia wymian}
 \usage{
 strategia_wymian_1_1_1_1(stado)
 }
@@ -13,6 +13,9 @@ strategia_wymian_1_1_1_1(stado)
 wymiany ze strategii
 }
 \description{
-Strategia wymian z zalozeniem ze zawsze chcemy miec jednego krolika, jedna owce, jednego malego psa i jednego duzego psa
+Funkcja `strategia_wymian_1_1_1_1()` otrzymuje jako argument stan stada gracza. Zaklada ona, ze jesli tylko to mozliwe, chcemy miec w stadzie glownym jednego krolika, jedna owce, jednego malego psa, jednego duzego psa. Po zdobyciu dwoch koni, wymieniamy jednego na zwierzeta pozostalych gatunkow.
+}
+\seealso{
+`strategia_wymian_0_0_0_0`, `strategia_owce`
 }
 

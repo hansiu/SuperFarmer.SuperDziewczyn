@@ -1,6 +1,10 @@
 #'Zamieniamy wynik rzutu na wektor
 #'
+#'Funkcja `zamien_wynik_rzutu_na_wektor()` przyjmuje wynik z rzutu kostkami. Zwraca wektor zawierajacy 0,1 lub 2 w zaleznosci ile i jakie zwierzeta zostaly wylosowane na kostkach.
+#'
 #'@param wynik Wynik rzutu
+#'
+#'@return z_rzutu wektor zawierajacy wylosowane zwierzeta
 #'
 #'@examples
 #'zamien_wynik_rzutu_na_wektor(c("krolik","owca"))

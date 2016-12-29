@@ -13,6 +13,11 @@ statystyki_gry(wektor)
 statystyki dla gry
 }
 \description{
-Funkcja obliczajaca podstawowe statystki dla wybranej wczesniej liczby gier
+Funkcja`statystyki_gry()` przyjmuje wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier. Zwraca podstawowe statystyki (min,max,kwantyle,mediana,srednia) dotyczace dlugosci trwania gier.
+}
+\examples{
+wektor <- c(20,40,20,10,12,55)
+statystyki_gry(wektor)
+
 }
 

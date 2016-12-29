@@ -1,9 +1,12 @@
-#'Strategia wymian z zalozeniem ze zawsze chcemy miec jednego krolika, jedna owce, jednego malego psa i jednego duzego psa
+#'Strategia wymian
+#'
+#'Funkcja `strategia_wymian_1_1_1_1()` otrzymuje jako argument stan stada gracza. Zaklada ona, ze jesli tylko to mozliwe, chcemy miec w stadzie glownym jednego krolika, jedna owce, jednego malego psa, jednego duzego psa. Po zdobyciu dwoch koni, wymieniamy jednego na zwierzeta pozostalych gatunkow.
 #'
 #'@param stado stado gracza
 #'
-#'
 #'@return wymiany ze strategii
+#'
+#'@seealso `strategia_wymian_0_0_0_0`, `strategia_owce`
 #'
 #'@export
 

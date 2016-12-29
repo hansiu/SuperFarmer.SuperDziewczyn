@@ -1,11 +1,15 @@
 #'Przeprowadzenie atakow drapieznikow
 #'
+#'Funkcja atak_drapieznika() przyjmuje 6 argumentow zwiazanych z pojawieniem/niepojawieniem sie na kostkach lisa lub wilka. Zwraca ona stan stada gracza.
+#'
 #'@param czy_lis wartosc logiczna: TRUE - pojawil sie lis, FALSE - nie pojawil sie
 #'@param czy_wilk wartosc logiczna: TRUE - pojawil sie wilk, FALSE - nie pojawil sie
 #'@param stado stan stada gracza
 #'@param stado_max maksymalny stan stada gracza
-#'@param co_zostawia_lis wektor zwierzat ktore zostawia lis
-#'@param co_zostawia_wilk wektor zwierzat ktore zostawia wilk
+#'@param co_zostawia_lis wektor zwierzat ktore zostawia lis po ataku, jeśli nie bylo malego psa w stadzie gracza
+#'@param co_zostawia_wilk wektor zwierzat ktore zostawia wilk po ataku, jeśli nie bylo malego psa w stadzie gracza
+#'
+#'@return stado gracza
 #'
 #'@examples
 #'stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
@@ -25,7 +29,6 @@
       #ucieka duzy pies
       stado <- .dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,0,1),-1,stado,stado_max-stado)
     } else {
-      # wszystko oprocz koni i psow ucieka
       stado <- .dodaj_lub_odejmij_zwierzeta(pmax(stado-co_zostawia_wilk,zeros),-1,stado,stado_max-stado)
     }
   }
@@ -34,7 +37,6 @@
       #ucieka maly pies
       stado <- .dodaj_lub_odejmij_zwierzeta(c(0,0,0,0,0,1,0),-1,stado,stado_max-stado)
     } else {
-      # wszystkie kroliki uciekaja
       stado <- .dodaj_lub_odejmij_zwierzeta(pmax(stado-co_zostawia_lis,zeros),-1,stado,stado_max-stado)
     }
   }

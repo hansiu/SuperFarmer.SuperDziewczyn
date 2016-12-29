@@ -33,6 +33,6 @@ gra(strategia, stado_max = SuperFarmer.SuperDziewczyn::stado_max,
 liczba oznaczajaca dlugosc trwania gry
 }
 \description{
-Funkcja opisujaca przebieg gry
+Funkcja `gra()` symuluje pojedyncza rozgrywke w SuperFarmera zadana na poczatku strategia. Opcjonalnie mozna zmieniac parametry, np. zwierzeta na kostkach, warunek wygranej. Funkcja zwraca liczbe oznaczajaca dlugosc trwania tejze gry.
 }
 

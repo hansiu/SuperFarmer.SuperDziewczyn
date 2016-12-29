@@ -1,9 +1,12 @@
-#'Strategia wymian z zalozeniem ze gramy va banque
+#'Strategia wymian
+#'
+#'Funkcja `strategia_wymian_0_0_0_0()` otrzymuje jako argument stan stada gracza. Zaklada ona ze jesli nie jest mozliwa wymiana na konia to wymianiamy sie na mozliwie najwartosciowsze zwierze z listy. Po zdobyciu dwoch koni, wymieniamy jednego na zwierzeta pozostalych gatunkow.
 #'
 #'@param stado stado gracza
 #'
-#'
 #'@return wymiany ze strategii
+#'
+#'@seealso `strategia_owce` i `strategia_wymian_1_1_1_1`
 #'
 #'@export
 

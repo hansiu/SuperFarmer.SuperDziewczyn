@@ -1,10 +1,12 @@
 #'Wynik rzutu dwoma kostkami
 #'
-#'Funkcja rzut_kostkami() wyznacza pare wartosci - nazwy zwierzat na obu kostkach.
+#'Funkcja `rzut_kostkami()` przyjmuje dwa argumenty - nazwy kostek .Wyznacza pare wartosci - nazwy zwierzat na obu kostkach.
 #'
 #'@param a wektor zawierajacy zwierzeta na kostce zielonej
 #'@param b wektor zawierajacy zwierzeta na kostce czerwonej
+#'
 #'@return Wektor zawierajacy nazwy zwierzat wylosowanych na kostce zielonej i czerwonej odpowiednio
+#'
 #'@examples
 #'kostka_czerwona <- c("krolik","krolik","krolik","krolik", "krolik","krolik","owca","owca",
 #'"swinia","swinia","kon","lis")

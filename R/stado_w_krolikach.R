@@ -1,7 +1,10 @@
 #'Funkcja obliczajaca wartosc naszego stada
 #'
+#'Funkcja `stado_w_krolikach()` przyjmuje 2 argumenty. Oblicza ona wartosc stada wyznaczona na podstawie liczebnosci stada i wartosci poszczegolnych zwierzat wyrazonej w krolikach.
+#'
 #'@param wartosc_w_krolikach wartosc danych zwierzat
 #'@param tabela tabela dla ktorej chcemy liczyc wartosc
+#'
 #'@return saldo czyli wartosc tabeli
 #'
 #'@examples

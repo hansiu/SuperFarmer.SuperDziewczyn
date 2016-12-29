@@ -1,9 +1,12 @@
-#'Funkcja wizualizacja gry zwraca histogram pokazujacy rozklad trwania gier
+#'Wizualizacja n gier
+#'
+#'Funkcja `wizualizacja_gry()` jako argumenty pobiera wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier oraz typy wykresow ktore chcemy uzyskac (mozemy wybierac sposrod : histogram,boxplot,skrzypce,boxplot + skrzypce, skrzypce + boxplot).
 #'
 #'@param wektor wektor zawierajacy dane dotyczace dlugosci trwania poszczegolnych gier
 #'@param typ_wykresu1 wykres jaki chcemy uzyskac
 #'@param typ_wykresu2 opcjonalnie druga warstwa na wykresie
 #'
+#'@return wykres
 #'
 #'@importFrom ggplot2 ggplot
 #'@importFrom ggplot2 aes

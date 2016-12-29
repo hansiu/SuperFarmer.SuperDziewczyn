@@ -1,10 +1,15 @@
  #'Funkcja zmieniajaca stan stad: gracza i glownego
-#'
+ #'
+ #'Funkcja `dodaj_lub_odejmij_zwierzeta()` przyjmuje 4 argumenty. W zaleznosci od argumentu `jak` dodaje lub odejmuje od stada gracza zadana jako argument tabele/nazwany wektor. Zwraca stan stada gracza.
 #'
 #'@param co mozliwe zmiany w stadzie
-#'@param jak 1-dodawanie do stada gracza, -1 odejmowanie od stada gracza
+#'@param jak 1:dodawanie do stada gracza, -1:odejmowanie od stada gracza
 #'@param stado stan stada gracza
 #'@param stado_glowne stan stada glownego
+#'
+#'@return stan stada gracza po zmianach
+#'
+#'@seealso `dokonanie_wymian`
 #'
 #'@examples
 #'stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)

@@ -3,9 +3,9 @@
 \docType{data}
 \name{co_zostawia_lis}
 \alias{co_zostawia_lis}
-\title{Co po ataku zostawia lis}
-\format{wektor 7 elementowy}
+\title{Co po ataku maksymalnie zostawia lis w stadzie gracza}
+\format{nazwany wektor 7 elementowy}
 \description{
-Co po ataku zostawia lis
+Co po ataku maksymalnie zostawia lis w stadzie gracza
 }
 

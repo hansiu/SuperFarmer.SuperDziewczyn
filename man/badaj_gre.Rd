@@ -36,6 +36,11 @@ badaj_gre(strategia, powtorzenia = 100,
 wektor zawierajacy dane dotyczace dlugosci trwania wybranej liczby gier
 }
 \description{
-Funkcja powtarzajaca gre podana liczbe razy
+Funkcja badaj_gre() symuluje n rozgrywek w SuperFarmera zadana na poczatku strategia. Opcjonalnie mozna zmieniac parametry, np. powtorzenia, zwierzeta na kostkach, warunek wygranej. Funkcja zwraca wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier.
+}
+\examples{
+badaj_gre(strategia_owce)
+warunki <- c('krolik'=3,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
+badaj_gre(strategia_owce,warunek_wygranej=warunki)
 }
 

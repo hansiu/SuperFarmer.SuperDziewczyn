@@ -2,7 +2,7 @@
 % Please edit documentation in R/strategia_wymian_0_0_0_0.R
 \name{strategia_wymian_0_0_0_0}
 \alias{strategia_wymian_0_0_0_0}
-\title{Strategia wymian z zalozeniem ze gramy va banque}
+\title{Strategia wymian}
 \usage{
 strategia_wymian_0_0_0_0(stado)
 }
@@ -13,6 +13,9 @@ strategia_wymian_0_0_0_0(stado)
 wymiany ze strategii
 }
 \description{
-Strategia wymian z zalozeniem ze gramy va banque
+Funkcja `strategia_wymian_0_0_0_0()` otrzymuje jako argument stan stada gracza. Zaklada ona ze jesli nie jest mozliwa wymiana na konia to wymianiamy sie na mozliwie najwartosciowsze zwierze z listy. Po zdobyciu dwoch koni, wymieniamy jednego na zwierzeta pozostalych gatunkow.
+}
+\seealso{
+`strategia_owce` i `strategia_wymian_1_1_1_1`
 }
 

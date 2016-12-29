@@ -1,13 +1,15 @@
 #'Funkcja opisujaca przebieg rzutu i zwiazane z nim zmiany w stadzie gracza i stadzie glownym
 #'
+#'Funkcja `przebieg_rzutu()` przyjmuje 6 argumentow. Symuluje ona jednorazowy rzut kostka przez gracza oraz zwiazane tylko z tym rzutem zmiany w stadzie gracza. Zwraca ona nowy stan stada gracza.
+#'
 #'@param stado stan stada gracza
 #'@param stado_max maksymalna wartosc stada glownego
 #'@param kostka_zielona zwierzeta na kostce zielonej
 #'@param  kostka_czerwona zwierzeta na kostce czerwonej
-#'@param co_zostawia_lis wektor zwierzat ktore zostawia lis
-#'@param co_zostawia_wilk wektor zwierzat ktore zostawia wilk
+#'@param co_zostawia_lis wektor zwierzat ktore zostawia lis po ataku, jeśli nie bylo malego psa w stadzie gracza
+#'@param co_zostawia_wilk wektor zwierzat ktore zostawia wilk po ataku, jeśli nie bylo malego psa w stadzie gracza
 #'
-#'@return stado
+#'@return stado stan stada gracza
 #'
 #'@examples
 #'stado_gracza <- c("krolik"=1,"owca"=2,"swinia"=2,"krowa"=2,"kon"=0,"maly_pies"=0,"duzy_pies"=0)

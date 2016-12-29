@@ -1,12 +1,15 @@
 #'Zamiana jednego zwierzecia na kilka
 #'
-#'Funkcja jedno_na_kilka() zwraca nam tabele zmian ktore mozna wykonac przy zaproponowanej wymianie
+#'Funkcja `jedno_na_kilka()` przyjmuje 4 argumenty. Dokonuje wymiany jednego (bardziej wartosciowego) zwierzecia, na kilka mniejszych. Zwraca możliwą do wykonania tabele zmian w stadzie.
 #'
 #'@param stado stan stada gracza
 #'@param wartosc wartosc zwierzat w krolikach
 #'@param co nazwa zwierzecia ktore chcemy oddac
 #'@param na_co nazwa zwierzecia ktore chcemy otrzymac
+#'
 #'@return tabela zmian, ktore na dana chwile mozna wykonac
+#'
+#'@seealso `kilka_na_jedno`
 #'
 #'@examples
 #'stado <- c("krolik"=3,"owca"=1,"swinia"=3,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=1)
@@ -18,7 +21,6 @@
   if(stado[[co]]==0){
     return(FALSE)
   }
-  #tylko ta funkcja ma jeden feler bierze np krowe i kupuje tyle ile sie da na przykald owiec wiec czesto jest tak ze mamy -1 krowe i +6 owiec zadnego innego zwierzecia nie dostajemy
   stado_max <- c(60,24,20,12,6,4,2)
   stado_glowne <- stado_max-stado
   names(stado_glowne) <- c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
