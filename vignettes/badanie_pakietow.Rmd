@@ -1,0 +1,158 @@
+---
+title: "SuperFarmer.SuperDziewczyn z innymi pakietami"
+author: "A. Dąbrowska, H. Kranas"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, eval=TRUE,echo=FALSE}
+library(knitr)
+library(SuperFarmer.SuperDziewczyn)
+library(SuperFarmerAGOJZB)
+library(SuperFarmerMoc)
+library(SuperFarmer.SuperPakiet)
+library(SuperFarmerADiPR)
+library(SuperFarmerMAPA)
+```
+
+## SuperFarmer.SuperDziewczyn z własnymi strategiami
+
+```{r}
+wynik_superfarmer.superdziewczyn_strategia_owce <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_owce,powtorzenia=1000)
+
+wynik_superfarmer.superdziewczyn_strategia_wymian_0_0_0_0 <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_wymian_0_0_0_0,powtorzenia=1000)
+
+wynik_superfarmer.superdziewczyn_strategia_wymian_1_1_1_1 <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_wymian_1_1_1_1,powtorzenia=1000)
+
+```
+
+
+###Statystyki dla poszczególnych strategii
+
+####Strategia_owce
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_owce)
+```
+
+####Strategia_wymian_0_0_0_0
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_wymian_0_0_0_0)
+```
+
+####Strategia_wymian_1_1_1_1
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_wymian_1_1_1_1)
+```
+
+Jak widać najlepszą strategią okazuje się `strategia.owce`.
+
+###Wizualizacja najlepszej strategii
+
+####Histogram
+```{r}
+SuperFarmer.SuperDziewczyn::wizualizacja_gry(wynik_superfarmer.superdziewczyn_strategia_owce,"histogram")
+```
+
+
+####Boxplot i wykres skrzypcowy
+```{r}
+SuperFarmer.SuperDziewczyn::wizualizacja_gry(wynik_superfarmer.superdziewczyn_strategia_owce,"boxplot","skrzypce")
+```
+
+
+##SuperFarmer.SuperDziewczyn z innymi strategiami
+
+###Pakiet `SuperFarmerAGOJZB`
+
+```{r}
+wynik_superfarmer.superdziewczyn_strategia_AGOJZB <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerAGOJZB::strategia_AGOJZB,powtorzenia=1000)
+
+```
+
+####Statystyki
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_AGOJZB)
+```
+
+###Pakiet `SuperFarmerMoc`
+```{r}
+wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerMoc::strategia_postMDiPR,powtorzenia=1000)
+```
+
+####Statystyki
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_postMDiPR)
+```
+
+###Pakiet `SuperFarmer.SuperPakiet`
+
+```{r}
+wynik_superfarmer.superdziewczyn_strategia_1_na_wiele <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmer.SuperPakiet::strategia_1_na_wiele,powtorzenia=1000)
+```
+
+####Statystyki
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_1_na_wiele)
+```
+
+###Pakiet `SuperFarmerADiPR`
+```{r}
+wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerADiPR::strategia_postMDiPR,powtorzenia=1000)
+```
+
+####Statystyki
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_postMDiPR)
+```
+
+##Nasza strategia z innymi pakietami
+
+###Pakiet `SuperFarmerAGOJZB`
+
+```{r}
+wynik_superfarmeragojzb_strategia_owce <- SuperFarmerAGOJZB::badaj_gre(ilosc_wywolan = 1000,SuperFarmer.SuperDziewczyn::strategia_owce)
+
+```
+
+####Statystyki
+```{r}
+wynik_superfarmeragojzb_strategia_owce
+
+```
+
+###Pakiet `SuperFarmerMoc`
+```{r}
+wynik_superfarmermoc_strategia_owce <- SuperFarmerMoc::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce)
+```
+
+####Statystyki
+```{r}
+summary(wynik_superfarmermoc_strategia_owce)
+```
+
+###Pakiet `SuperFarmer.SuperPakiet`
+
+```{r}
+wynik_superfarmer.superpakiet_strategia_owce <- SuperFarmer.SuperPakiet::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce)
+```
+
+####Statystyki
+```{r}
+wynik_superfarmer.superpakiet_strategia_owce[1]
+```
+
+###Pakiet `SuperFarmerADiPR`
+```{r}
+wynik_superfarmeradipr_strategia_owce <- SuperFarmerADiPR::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce)
+```
+
+####Statystyki
+```{r}
+wynik_superfarmeradipr_strategia_owce
+```
+

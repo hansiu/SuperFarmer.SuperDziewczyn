@@ -1,5 +1,7 @@
 test_that("Gra przyjmuje nazwe funkcji strategii i zwraca liczbe",{
+  warunki <- c("krolik"=3,"owca"=1,"swinia"=0,"krowa"=0,"kon"=0,"maly_pies"=0,"duzy_pies"=0)
   expect_error(gra())
+  expect_error(gra(strategia_owce()))
   expect_is(gra(strategia_wymian_0_0_0_0),"numeric")
   expect_length(gra(strategia_wymian_0_0_0_0),1)
   expect_named(gra(strategia_wymian_0_0_0_0),NULL)
@@ -9,4 +11,5 @@ test_that("Gra przyjmuje nazwe funkcji strategii i zwraca liczbe",{
   expect_length(gra(strategia_owce),1)
   expect_is(gra(strategia_owce),"numeric")
   expect_named(gra(strategia_owce),NULL)
+  expect_is(gra(strategia_owce,warunek_wygranej = warunki),"numeric")
 })
