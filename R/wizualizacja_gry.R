@@ -28,13 +28,13 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
   colnames(czasy) <- "Czas_gry"
   if(typ_wykresu1 == "histogram"&& is.null(typ_wykresu2)==TRUE){
       ggplot(data=czasy, aes(czasy$Czas_gry))+
-        geom_histogram(binwidth=1,col="blue", fill="green") +
+        geom_histogram(binwidth=1,col="#0033FF", fill="#33CCCC") +
         labs(title="Rozklad czasu gry") +
         labs(x="Czas gry", y="Liczba gier")
     }else{
       if(typ_wykresu1 == "boxplot" && is.null(typ_wykresu2)==TRUE){
         ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
-          geom_boxplot(fill="green")+
+          geom_boxplot(fill="#0033FF")+
           theme(axis.ticks.x=element_blank())+
           ylab("Czas trwania gier") +
           xlab("Badaj gre")+
@@ -42,7 +42,7 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
       }else{
         if(typ_wykresu1 == "skrzypce" && is.null(typ_wykresu2)==TRUE){
           ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
-            geom_violin(fill="blue")+
+            geom_violin(fill="#33CCCC")+
             theme(axis.ticks.x=element_blank())+
             ylab("Czas trwania gier") +
             xlab("Badaj gre")+
@@ -50,16 +50,12 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
         }else{
           if((typ_wykresu1=="boxplot"&&typ_wykresu2=="skrzypce")||(typ_wykresu1=="skrzypce"&&typ_wykresu2=="boxplot")){
             ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
-            geom_violin(fill="#33FFFF")+
-            geom_boxplot(fill="#99CCFF")+
+            geom_violin(fill="#33CCCC")+
+            geom_boxplot(fill="#0033FF")+
             theme(axis.ticks.x=element_blank())+
             ylab("Czas trwania gier") +
             xlab("Badaj gre")+
             labs(title="Rozklad czasu gry")
         }else{
         ("Podaj poprawny typ wykresu")
-        }
-        }
-      }
-    }
-  }
+        }}}}}
