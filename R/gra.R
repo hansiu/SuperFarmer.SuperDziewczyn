@@ -25,6 +25,7 @@ gra <- function(strategia,stado_max=SuperFarmer.SuperDziewczyn::stado_max,kostka
   if(!is.null(strategia)){
   while(.wygrana(warunek_wygranej,stado)!=TRUE){
     stado <- tryCatch(strategia(stado,wartosc_w_krolikach=wartosc_w_krolikach),error = function(e) strategia(stado), finally= {})
+    names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
     stado <- .przebieg_rzutu(stado,stado_max,kostka_zielona,kostka_czerwona,co_zostawia_lis,co_zostawia_wilk)
     licznik <- licznik+1
   }}

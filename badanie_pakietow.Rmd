@@ -23,11 +23,11 @@ library(SuperFarmerMAPA)
 ## SuperFarmer.SuperDziewczyn z własnymi strategiami
 
 ```{r}
-wynik_superfarmer.superdziewczyn_strategia_owce <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_owce,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_owce <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_owce,powtorzenia=100)
 
-wynik_superfarmer.superdziewczyn_strategia_wymian_0_0_0_0 <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_wymian_0_0_0_0,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_wymian_0_0_0_0 <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_wymian_0_0_0_0,powtorzenia=100)
 
-wynik_superfarmer.superdziewczyn_strategia_wymian_1_1_1_1 <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_wymian_1_1_1_1,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_wymian_1_1_1_1 <- SuperFarmer.SuperDziewczyn::badaj_gre(strategia_wymian_1_1_1_1,powtorzenia=100)
 
 ```
 
@@ -70,7 +70,7 @@ SuperFarmer.SuperDziewczyn::wizualizacja_gry(wynik_superfarmer.superdziewczyn_st
 ###Pakiet `SuperFarmerAGOJZB`
 
 ```{r}
-wynik_superfarmer.superdziewczyn_strategia_AGOJZB <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerAGOJZB::strategia_AGOJZB,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_AGOJZB <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerAGOJZB::strategia_AGOJZB,powtorzenia=100)
 
 ```
 
@@ -81,7 +81,7 @@ SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_stra
 
 ###Pakiet `SuperFarmerMoc`
 ```{r}
-wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerMoc::strategia_postMDiPR,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerMoc::strategia_postMDiPR,powtorzenia=100)
 ```
 
 ####Statystyki
@@ -92,7 +92,7 @@ SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_stra
 ###Pakiet `SuperFarmer.SuperPakiet`
 
 ```{r}
-wynik_superfarmer.superdziewczyn_strategia_1_na_wiele <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmer.SuperPakiet::strategia_1_na_wiele,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_1_na_wiele <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmer.SuperPakiet::strategia_1_na_wiele,powtorzenia=100)
 ```
 
 ####Statystyki
@@ -102,7 +102,7 @@ SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_stra
 
 ###Pakiet `SuperFarmerADiPR`
 ```{r}
-wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerADiPR::strategia_postMDiPR,powtorzenia=1000)
+wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerADiPR::strategia_postMDiPR,powtorzenia=100)
 ```
 
 ####Statystyki
@@ -110,12 +110,22 @@ wynik_superfarmer.superdziewczyn_strategia_postMDiPR <- SuperFarmer.SuperDziewcz
 SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategia_postMDiPR)
 ```
 
+###Pakiet `SuperFarmerMAPA`
+```{r}
+wynik_superfarmer.superdziewczyn_strategiaRF <- SuperFarmer.SuperDziewczyn::badaj_gre(SuperFarmerMAPA::strategia_rf,powtorzenia=100)
+```
+
+####Statystyki
+```{r}
+SuperFarmer.SuperDziewczyn::statystyki_gry(wynik_superfarmer.superdziewczyn_strategiaRF)
+```
+
 ##Nasza strategia z innymi pakietami
 
 ###Pakiet `SuperFarmerAGOJZB`
 
 ```{r}
-wynik_superfarmeragojzb_strategia_owce <- SuperFarmerAGOJZB::badaj_gre(ilosc_wywolan = 1000,SuperFarmer.SuperDziewczyn::strategia_owce)
+wynik_superfarmeragojzb_strategia_owce <- SuperFarmerAGOJZB::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce, ilosc_wywolan = 100)
 
 ```
 
@@ -148,7 +158,7 @@ wynik_superfarmer.superpakiet_strategia_owce[1]
 
 ###Pakiet `SuperFarmerADiPR`
 ```{r}
-wynik_superfarmeradipr_strategia_owce <- SuperFarmerADiPR::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce)
+wynik_superfarmeradipr_strategia_owce <- SuperFarmerADiPR::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce,powtorzen = 100)
 ```
 
 ####Statystyki
@@ -156,3 +166,12 @@ wynik_superfarmeradipr_strategia_owce <- SuperFarmerADiPR::badaj_gre(SuperFarmer
 wynik_superfarmeradipr_strategia_owce
 ```
 
+###Pakiet `SuperFarmerMAPA`
+
+```{r}
+wynik_superfarmermapa_strategia_owce <- SuperFarmerMAPA::badaj_gre(SuperFarmer.SuperDziewczyn::strategia_owce)
+```
+
+```{r}
+wynik_superfarmermapa_strategia_owce
+```

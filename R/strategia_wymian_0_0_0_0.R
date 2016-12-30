@@ -13,6 +13,8 @@
 strategia_wymian_0_0_0_0 <- function(stado){
   wymiana<-numeric(7)
   names(wymiana) <-c("krolik","owca","swinia", "krowa", "kon", "maly_pies","duzy_pies")
+  names(stado) <- c('krolik','owca','swinia','krowa','kon','maly_pies','duzy_pies')
+
   kroliki <- 0
   owce <-0
   male_psy <- 0
