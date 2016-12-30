@@ -1,6 +1,6 @@
 #'Wizualizacja n gier
 #'
-#'Funkcja `wizualizacja_gry()` jako argumenty pobiera wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier oraz typy wykresow ktore chcemy uzyskac (mozemy wybierac sposrod : histogram,boxplot,skrzypce,boxplot + skrzypce, skrzypce + boxplot).
+#'Funkcja `wizualizacja_gry()` jako argumenty pobiera wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier oraz typy wykresow ktore chcemy uzyskac (mozemy wybierac sposrod : histogram, pudelkowy, skrzypcowy, pudelkowy + skrzypcowy, skrzypcowy + pudelkowy).
 #'
 #'@param wektor wektor zawierajacy dane dotyczace dlugosci trwania poszczegolnych gier
 #'@param typ_wykresu1 wykres jaki chcemy uzyskac
@@ -32,7 +32,7 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
         labs(title="Rozklad czasu gry") +
         labs(x="Czas gry", y="Liczba gier")
     }else{
-      if(typ_wykresu1 == "boxplot" && is.null(typ_wykresu2)==TRUE){
+      if(typ_wykresu1 == "pudelkowy" && is.null(typ_wykresu2)==TRUE){
         ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
           geom_boxplot(fill="#0033FF")+
           theme(axis.ticks.x=element_blank())+
@@ -40,7 +40,7 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
           xlab("Badaj gre")+
           labs(title="Rozklad czasu gry")
       }else{
-        if(typ_wykresu1 == "skrzypce" && is.null(typ_wykresu2)==TRUE){
+        if(typ_wykresu1 == "skrzypcowy" && is.null(typ_wykresu2)==TRUE){
           ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
             geom_violin(fill="#33CCCC")+
             theme(axis.ticks.x=element_blank())+
@@ -48,10 +48,10 @@ wizualizacja_gry <- function(wektor, typ_wykresu1 = "histogram", typ_wykresu2=NU
             xlab("Badaj gre")+
             labs(title="Rozklad czasu gry")
         }else{
-          if((typ_wykresu1=="boxplot"&&typ_wykresu2=="skrzypce")||(typ_wykresu1=="skrzypce"&&typ_wykresu2=="boxplot")){
+          if((typ_wykresu1=="pudelkowy"&&typ_wykresu2=="skrzypcowy")||(typ_wykresu1=="skrzypcowy"&&typ_wykresu2=="pudelkowy")){
             ggplot(data=czasy,aes(x=factor(0),czasy$Czas_gry))+
             geom_violin(fill="#33CCCC")+
-            geom_boxplot(fill="#0033FF")+
+            geom_boxplot(fill="#0033FF", outlier.alpha = 0, alpha = 0.5)+
             theme(axis.ticks.x=element_blank())+
             ylab("Czas trwania gier") +
             xlab("Badaj gre")+

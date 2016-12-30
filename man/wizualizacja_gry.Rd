@@ -17,6 +17,6 @@ wizualizacja_gry(wektor, typ_wykresu1 = "histogram", typ_wykresu2 = NULL)
 wykres
 }
 \description{
-Funkcja `wizualizacja_gry()` jako argumenty pobiera wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier oraz typy wykresow ktore chcemy uzyskac (mozemy wybierac sposrod : histogram,boxplot,skrzypce,boxplot + skrzypce, skrzypce + boxplot).
+Funkcja `wizualizacja_gry()` jako argumenty pobiera wektor dlugosci n zawierajacy informacje o dlugosci poszczegolnych gier oraz typy wykresow ktore chcemy uzyskac (mozemy wybierac sposrod : histogram, pudelkowy, skrzypcowy, pudelkowy + skrzypcowy, skrzypcowy + pudelkowy).
 }
 
