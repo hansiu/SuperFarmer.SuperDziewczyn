@@ -10,7 +10,7 @@ vignette: >
 ---
 
 
-```{r, eval=TRUE,echo=FALSE}
+```{r, eval=TRUE,echo=FALSE, message=FALSE,warning=FALSE}
 library(knitr)
 library(SuperFarmer.SuperDziewczyn)
 library(SuperFarmerAGOJZB)
@@ -18,6 +18,8 @@ library(SuperFarmerMoc)
 library(SuperFarmer.SuperPakiet)
 library(SuperFarmerADiPR)
 library(SuperFarmerMAPA)
+library(SuperFarmerRCNK)
+library(SuperFarmerDA)
 ```
 
 ## SuperFarmer.SuperDziewczyn z własnymi strategiami
